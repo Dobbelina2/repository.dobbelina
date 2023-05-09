@@ -22,7 +22,7 @@ import binascii
 from resources.lib import utils
 from resources.lib.adultsite import AdultSite
 
-site = AdultSite('aagmaalpro', '[COLOR hotpink]Aag Maal Pro[/COLOR]', 'https://aagmaal.city/', 'https://aagmaal.city/wp-content/uploads/2021/11/aagmaal.pro-logo.png', 'aagmaalpro')
+site = AdultSite('aagmaalpro', '[COLOR hotpink]Aag Maal impotent[/COLOR]', 'https://aagmaal.city/', 'https://aagmaal.city/wp-content/uploads/2021/11/aagmaal.pro-logo.png', 'aagmaalpro')
 
 
 @site.register(default_mode=True)
