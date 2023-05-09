@@ -1,0 +1,1556 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EventGhost Version="0.5.0-rc4" Guid="{4DF62C40-8326-4DDC-88D7-2128BE4AF9C8}" Time="1607192420.08">
+    <Autostart Name="Autostart" XML_Guid="{F0241CD6-9BFA-4217-BA37-F13EAF63B5A4}" Expanded="True">
+        <Plugin XML_Guid="{2E40B262-8122-4FBD-8444-BBCF1D374A84}" Identifier="Task" Guid="{D1748551-C605-4423-B392-FB77E6842437}" File="Task">
+            gAIpLg==
+        </Plugin>
+        <Action XML_Guid="{EB28FCAB-B503-4D9B-B309-C1B64936E5CB}">
+            EventGhost.EnableExclusive(XmlIdLink(72))
+        </Action>
+        <Plugin XML_Guid="{633B097D-6BF6-4305-A29C-F62408ED935B}" Identifier="XBMC2" Guid="{8C8B850C-773F-4583-AAD9-A568262B7933}" File="XBMCRepeat">
+            gAJYCQAAADEyNy4wLjAuMXEAWAIAAAA4MHEBhnECLg==
+        </Plugin>
+        <Plugin XML_Guid="{B82B9452-11E7-4041-A7C2-0F7FD1A23EEE}" Identifier="MCE_Vista" Guid="{A7DB04BB-9F0A-486A-BCA1-CA87B9620D54}" File="MceRemote_Vista">
+            gAIpLg==
+        </Plugin>
+    </Autostart>
+    <Macro Name="Switch to mode: XBMC" XML_Guid="{1AFAC08B-4433-44C7-A2F7-82841412EEEA}">
+        <Event Name="Task.Activated.kodi" XML_Guid="{20DE58AA-E519-4B25-A3A2-B4900BDCE5EA}" />
+        <Action XML_Guid="{EE88DE14-D0FF-4892-B794-B929896B6152}">
+            EventGhost.EnableExclusive(XmlIdLink(127))
+        </Action>
+    </Macro>
+    <Macro Name="Switch to mode: Mouse Emulation" XML_Guid="{124BD738-966A-458C-A850-290CC4AB185F}">
+        <Action XML_Guid="{B1FA1D0A-D30B-441F-BCFF-B3B7A95BFA17}">
+            EventGhost.EnableExclusive(XmlIdLink(17))
+        </Action>
+    </Macro>
+    <Macro Name="Switch to mode: Keyboard Emulation" XML_Guid="{4C84D0EF-63E2-4250-A96E-F89FA44117E0}">
+        <Event Name="Task.Deactivated.kodi" XML_Guid="{6B50C140-EF6C-44CB-95E6-EF1C01236B53}" />
+        <Event Name="Task.Activated.Desktop" XML_Guid="{6AE37A04-B636-4898-B2C5-F0570A292BD1}" />
+        <Action XML_Guid="{02E0E0CA-39F5-4A9A-8D94-9631D81EE277}">
+            EventGhost.EnableExclusive(XmlIdLink(72))
+        </Action>
+    </Macro>
+    <Folder Name="Context Folder" XML_Guid="{D839AC9C-6EEC-4154-A473-3F0E22B5A2B4}">
+        <Folder Name="Mouse Emulation" id="17" Enabled="False" XML_Guid="{7208FC5E-575B-4221-9E3B-AAB2C455815D}">
+            <Macro Name="Mouse Move Up" XML_Guid="{145DC62C-6127-48FF-B9A9-58CCE11620FF}">
+                <Event Name="Up" XML_Guid="{6EA1DD3B-783C-4E9A-81C3-09233C7E2541}" />
+                <Event Name="Num2" XML_Guid="{CDA003F4-0352-40FF-8BBF-6C3E8E53BA0A}" />
+                <Event Name="MceRemote.Mce.Up" XML_Guid="{BBA28A08-CEDA-41FE-B56C-1B73B07B375C}" />
+                <Action Enabled="False" XML_Guid="{184373C4-FB1F-4F70-A1A5-C31E3A18FD4D}">
+                    Mouse.GoDirection(0)
+                </Action>
+                <Action XML_Guid="{2C9400A5-A61F-4B9D-AFBC-84AFAA1C95E7}">
+                    Mouse.MoveRelative(0, -50)
+                </Action>
+                <Action XML_Guid="{E75BD5A2-EDA0-4EB0-A0D3-3C5C975835D8}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Mouse Move RightUp" XML_Guid="{77613F8D-2D74-47CC-8354-B091CBD134B1}">
+                <Event Name="Num3" XML_Guid="{35BAAB78-AE18-4AE8-9878-24A56C69EC22}" />
+                <Action XML_Guid="{0557BCD7-A7AA-449B-8BE5-BFB7E10858EA}">
+                    Mouse.GoDirection(45)
+                </Action>
+            </Macro>
+            <Macro Name="Mouse Move Right" XML_Guid="{C59B5F93-4C8F-4AE4-9FF0-8380E162D810}">
+                <Event Name="Right" XML_Guid="{5D5E3FE1-A0E5-4D6A-B8FC-E17272D1D787}" />
+                <Event Name="Num6" XML_Guid="{6785E4B5-23F6-4A77-B787-79797B209509}" />
+                <Event Name="MceRemote.Mce.Right" XML_Guid="{1BA8EA40-531D-47A2-AD26-9781C30B59E5}" />
+                <Action Enabled="False" XML_Guid="{ABCD5BBF-A926-4576-92B0-B22198B1AD78}">
+                    Mouse.GoDirection(90)
+                </Action>
+                <Action XML_Guid="{13932FF9-0FD7-4AED-BE3E-C09C5FD027D1}">
+                    Mouse.MoveRelative(50, 0)
+                </Action>
+                <Action XML_Guid="{4F78AC23-479A-41DA-82B5-24B57AA1CE81}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Mouse Move RightDown" XML_Guid="{984AADB4-F2B6-42F0-AA3A-EA3A46FD7CE5}">
+                <Event Name="Num9" XML_Guid="{9990572E-1C51-4F58-82FB-FDC375BE7127}" />
+                <Action XML_Guid="{22CF13B2-2A83-4997-AA08-14729180D705}">
+                    Mouse.GoDirection(u'135')
+                </Action>
+            </Macro>
+            <Macro Name="Mouse Move Down" XML_Guid="{D88094F8-0EFE-4571-B078-A3213080E04B}">
+                <Event Name="Down" XML_Guid="{6A53C08C-AB18-48B4-B679-D5B5C7F0C2A2}" />
+                <Event Name="Num8" XML_Guid="{9F19592B-CC7E-4FA8-A7B1-35CA99BB2B35}" />
+                <Event Name="MceRemote.Mce.Down" XML_Guid="{74018039-D854-4C06-BB1B-BC99E573473F}" />
+                <Action Enabled="False" XML_Guid="{0B8D715B-7CD3-436C-A7D5-161154A110B5}">
+                    Mouse.GoDirection(u'180')
+                </Action>
+                <Action XML_Guid="{0870BFF9-7AF5-4F2B-870D-D999762CEBEC}">
+                    Mouse.MoveRelative(0, 50)
+                </Action>
+                <Action XML_Guid="{BFDE8FB1-FC53-436F-9FA6-DD963CA100CE}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Mouse Move LeftDown" XML_Guid="{D24140F0-4CDD-42FF-87B5-E422DC4281ED}">
+                <Event Name="Num7" XML_Guid="{59470EAF-CCD3-46C8-9438-E71637A90A6B}" />
+                <Action XML_Guid="{947B6BCA-1A17-4581-87EF-DB8C1918356E}">
+                    Mouse.GoDirection(225)
+                </Action>
+            </Macro>
+            <Macro Name="Mouse Move Left" XML_Guid="{86E4DF5B-81D4-4BFB-81E3-40136962742F}">
+                <Event Name="Left" XML_Guid="{4193679C-1035-45E6-9F31-E4C697A18924}" />
+                <Event Name="Num4" XML_Guid="{C027DA03-AF8A-48E2-9EEA-679B925D9924}" />
+                <Event Name="MceRemote.Mce.Left" XML_Guid="{866C9C88-E560-4B73-9871-83B8A939572A}" />
+                <Action Enabled="False" XML_Guid="{72F4666F-C4FA-4DDA-80D1-28BE4D19D67A}">
+                    Mouse.GoDirection(270)
+                </Action>
+                <Action XML_Guid="{CBEB212B-11EF-4C0E-8BA8-326EB3A72537}">
+                    Mouse.MoveRelative(-50, 0)
+                </Action>
+                <Action XML_Guid="{43A23329-D750-49B4-BC9A-140256C75731}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Mouse Move LeftUp" XML_Guid="{30527C9D-0518-4A82-9DAE-38169EF63BF7}">
+                <Event Name="Num1" XML_Guid="{0D688A6A-65F5-4AC5-AA6E-BBFF760362E0}" />
+                <Action XML_Guid="{1B38A4F1-3AF0-4B77-B080-9020A7BEDE77}">
+                    Mouse.GoDirection(315)
+                </Action>
+            </Macro>
+            <Macro Name="Left Mouse Button" XML_Guid="{60475A07-72EB-423F-89E1-4332F6B48525}">
+                <Event Name="MceRemote.Mce.Play" XML_Guid="{FAE28E0F-B435-421B-849B-637020B18A0A}" />
+                <Action XML_Guid="{6FDC1BB2-F4C3-4AD1-B4C7-573AECFDAA86}">
+                    Mouse.LeftButton()
+                </Action>
+                <Action XML_Guid="{FEC5C0D9-A3D9-4E93-9B8A-C426FD78803B}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Right Mouse Button" XML_Guid="{0205E8A7-8856-4EA7-9F56-9FB4794C38F8}">
+                <Event Name="X10.Snapshot" XML_Guid="{6C737D11-E685-4283-8458-1250DFEC09A2}" />
+                <Action XML_Guid="{914F58F6-9DA2-487E-9D60-0133C5AB5ADA}">
+                    Mouse.RightButton()
+                </Action>
+            </Macro>
+            <Macro Name="Enable exclusive: Keyboard Emulation" XML_Guid="{E44BD8B5-D4C1-4BAC-8147-3BF4F841FAF1}">
+                <Event Name="MceRemote.Mce.DVDMenu" XML_Guid="{282428C7-55CC-4157-AA0B-107C3B391006}" />
+                <Action XML_Guid="{B8CA3C95-60F2-4AFB-BFCA-77C60C0E8F84}">
+                    EventGhost.EnableExclusive(XmlIdLink(72))
+                </Action>
+                <Action XML_Guid="{AFD003D4-E8AC-4337-BDB3-7618CCE37117}">
+                    EventGhost.ShowOSD(u'Keyboard Emulation', u'0;-36;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+                </Action>
+            </Macro>
+            <Macro Name="Ok -&gt; Enter Key" XML_Guid="{3E17072B-7905-4B50-9D30-4BA6C9905AC5}">
+                <Event Name="MceRemote.Mce.Ok" XML_Guid="{A5FD3373-2B6F-427D-8690-FB7F3F30EC7F}" />
+                <Action XML_Guid="{1F61526D-F2CE-4E2E-B2F9-0099464E2443}">
+                    Window.SendKeys(u'{Enter}')
+                </Action>
+            </Macro>
+        </Folder>
+        <Folder Name="Keyboard Emulation" id="72" XML_Guid="{7DD8221C-9355-466D-9DC7-D5FC55C389E0}">
+            <Macro Name="Up" XML_Guid="{7ABAF445-0254-49BA-8EDC-BDDA4A80081C}">
+                <Event Name="MceRemote.Mce.Up" XML_Guid="{5DE55E6B-098B-4F53-90E9-752591389720}" />
+                <Action XML_Guid="{141227A7-9A0F-4A65-BEA1-0E1F8E1297CB}">
+                    Window.SendKeys(u'{Up}')
+                </Action>
+                <Action XML_Guid="{7107E02A-9C27-44BB-9FF3-238926CE53ED}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Down" XML_Guid="{DB9F381B-AB16-49EE-A6A4-CCF6D610E890}">
+                <Event Name="MceRemote.Mce.Down" XML_Guid="{7D4627FC-1943-4894-8083-17B6B13AE7CC}" />
+                <Action XML_Guid="{B170EFA2-3C8A-4A58-A299-00E1156A796D}">
+                    Window.SendKeys(u'{Down}')
+                </Action>
+                <Action XML_Guid="{71E14814-DE70-4F14-A1FE-679A370A9619}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Right" XML_Guid="{09868E4B-B1DB-4DEB-BE46-4597898DCADB}">
+                <Event Name="MceRemote.Mce.Right" XML_Guid="{810EA0BD-359D-42DC-A59E-5B99C88C961D}" />
+                <Action XML_Guid="{D3D922A7-E253-4DFF-97BB-5C4E886C90FE}">
+                    Window.SendKeys(u'{Right}')
+                </Action>
+                <Action XML_Guid="{4DCBDD34-23A4-4583-95BF-DEFF09C404C6}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Left" XML_Guid="{3A43D7B1-C50B-4DDF-872B-3F5BA0C8140A}">
+                <Event Name="MceRemote.Mce.Left" XML_Guid="{B56A84BF-BAD3-4562-98A4-28D04425B276}" />
+                <Action XML_Guid="{98402F6A-F4DB-4E7F-ABC3-9F3CE1AAFF72}">
+                    Window.SendKeys(u'{Left}')
+                </Action>
+                <Action XML_Guid="{9476EA71-A9E9-44D8-87A2-58FA0FE03891}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Ok -&gt; Enter Key" XML_Guid="{3E17072B-7905-4B50-9D30-4BA6C9905AC5}">
+                <Event Name="MceRemote.Mce.Ok" XML_Guid="{A5FD3373-2B6F-427D-8690-FB7F3F30EC7F}" />
+                <Action XML_Guid="{1F61526D-F2CE-4E2E-B2F9-0099464E2443}">
+                    Window.SendKeys(u'{Enter}')
+                </Action>
+            </Macro>
+            <Macro Name="Delete -&gt; Escape Key" XML_Guid="{E13B6137-4CD4-4FE3-AFC8-F2851AA3F810}">
+                <Event Name="MceRemote.Mce.Escape" XML_Guid="{A81E8ACB-98BE-490A-BA38-9B6CF5785CAC}" />
+                <Action XML_Guid="{C738727E-296B-467B-A34F-5C15E763B7F4}">
+                    Window.SendKeys(u'{Esc}')
+                </Action>
+            </Macro>
+            <Macro Name="Power -&gt; Alt+F4" XML_Guid="{8B8C0E98-5585-4581-BAF3-445A267BF1DB}">
+                <Event Name="MceRemote.Mce.Power" Enabled="False" XML_Guid="{0DDD2F76-6017-40EB-820E-B8D71B555303}" />
+                <Action XML_Guid="{A0F0BD36-9A38-4FD1-9888-296CAB0FED4E}">
+                    Window.SendKeys(u'{Alt+F4}')
+                </Action>
+            </Macro>
+            <Macro Name="Forward -&gt; Tabulator" Enabled="False" XML_Guid="{914ABB5E-EF07-4B73-AFD7-4CEBDA3C02D3}">
+                <Event Name="Forward" XML_Guid="{982CC314-8F1E-4649-8667-5F379C802452}" />
+                <Action XML_Guid="{17300B95-CA61-4326-932B-E17C72602DDC}">
+                    Window.SendKeys(u'{Tab}')
+                </Action>
+            </Macro>
+            <Macro Name="Rewind -&gt; Shift+Tabulator" XML_Guid="{F28BCF70-55D9-4CD2-8E26-E9E356EF67F6}">
+                <Event Name="Rewind" XML_Guid="{47D590E3-6CB3-4BED-B44F-D5F807844CE9}" />
+                <Action XML_Guid="{BF740A00-86A2-4CA0-9539-BAB71EB35E4C}">
+                    Window.SendKeys(u'{Shift+Tab}')
+                </Action>
+            </Macro>
+            <Macro Name="ChannelUp -&gt; Plus" XML_Guid="{42969CD6-C215-4959-B4FE-8A0AD8C38BB4}">
+                <Event Name="ChannelUp" XML_Guid="{0B61BF8B-5165-48B5-9FAF-8CAFC43EF258}" />
+                <Action XML_Guid="{3137669A-8155-4703-BE06-4CFEDEC44D81}">
+                    Window.SendKeys(u'+')
+                </Action>
+            </Macro>
+            <Macro Name="ChannelDown -&gt; Minus" XML_Guid="{8C6B40CB-B818-4FE9-99D8-E86A27CF8AE5}">
+                <Event Name="ChannelDown" XML_Guid="{1353979F-4644-477D-8DA1-F0469EC72E0F}" />
+                <Action XML_Guid="{A67402AD-2051-4906-A54E-5794A55F58EB}">
+                    Window.SendKeys(u'-')
+                </Action>
+            </Macro>
+            <Macro Name="Rename -&gt; Start Menu" XML_Guid="{A0647002-DECA-4774-BFA1-175E8519AABE}">
+                <Event Name="Rename" XML_Guid="{E29F7612-1C41-429E-AE07-86EAFD905D98}" />
+                <Action XML_Guid="{378F40C9-1DA6-4EFD-8401-41DF2B653F29}">
+                    Window.SendKeys(u'{Win}')
+                </Action>
+            </Macro>
+            <Macro Name="Play -&gt; Space" XML_Guid="{2C673F2E-24FF-421C-A25F-91BF2F806E89}">
+                <Event Name="MceRemote.Mce.Play" XML_Guid="{01933EAA-1ACA-4E8C-80B6-A5F95F98F3A9}" />
+                <Action XML_Guid="{6FDC1BB2-F4C3-4AD1-B4C7-573AECFDAA86}">
+                    Mouse.LeftButton()
+                </Action>
+                <Action XML_Guid="{FEC5C0D9-A3D9-4E93-9B8A-C426FD78803B}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Enable exclusive: Mouse Emulation" XML_Guid="{802DA13F-8CFC-447F-BE57-DFD38A20850A}">
+                <Event Name="MceRemote.Mce.DVDMenu" XML_Guid="{F7D797AD-1BA2-4AF1-B346-ADB05B735BF4}" />
+                <Action XML_Guid="{7E17F8AA-E869-4B03-8542-3E06A1E74D8C}">
+                    EventGhost.EnableExclusive(XmlIdLink(17))
+                </Action>
+                <Action XML_Guid="{F218A318-CEF7-4C38-AFDD-7B290C17C3F7}">
+                    EventGhost.ShowOSD(u'Mouse Emulation', u'0;-36;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+                </Action>
+            </Macro>
+            <Macro Name="Stop" XML_Guid="{BC4A4F45-17E5-4B9D-8F44-D731874EDC60}">
+                <Event Name="MceRemote.Mce.Stop" XML_Guid="{6111E201-CF80-4D88-AC72-DB3A69EAD154}" />
+                <Action XML_Guid="{CEE22511-A87F-43B1-86A5-AA4B8BAA4212}">
+                    Window.SendKeys(u'{Ctrl+q}', False)
+                </Action>
+            </Macro>
+            <Macro Name="Back" XML_Guid="{9F9A928C-69A0-4A41-A8C0-E1CD1F5177A5}">
+                <Event Name="MceRemote.Mce.Back" XML_Guid="{7D3C997C-8D33-4FC9-9D6C-D225F1D50A8A}" />
+                <Action XML_Guid="{0E72B9D7-0C39-4324-9A48-8E499EF8BB1E}">
+                    Window.SendKeys(u'{Escape}', False)
+                </Action>
+            </Macro>
+        </Folder>
+        <Folder Name="XBMC2" id="127" Enabled="False" XML_Guid="{CDD8D20C-8FDB-459E-9289-1ECEF9CAB673}">
+            <Folder Name="Buttons" XML_Guid="{A18C0EDD-01E5-4768-9AF6-736B4146F23C}">
+                <Folder Name="Remote" XML_Guid="{2FDF2762-AF2A-4520-B8AC-A85EE3842F7D}">
+                    <Macro Name="Left" XML_Guid="{B5A468AE-9A5D-4292-BE0F-8B60E66BCFF4}">
+                        <Event Name="MceRemote.Mce.Left" XML_Guid="{BC2B9C9D-D3F8-4D2E-B78D-00E90BAB0287}" />
+                        <Action XML_Guid="{9CCD1441-512D-4A8A-ACAA-DCEC843A54A7}">
+                            XBMC2.RemoteLeft()
+                        </Action>
+                        <Action XML_Guid="{08569355-82D0-4496-B37B-994D09E6292B}">
+                            EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Right" XML_Guid="{8CFA65B8-7BDF-4E50-AAF2-141FB673F43E}">
+                        <Event Name="MceRemote.Mce.Right" XML_Guid="{386C2728-E2E3-4BC4-9D41-54DE509FDBDD}" />
+                        <Action XML_Guid="{3A41B54C-B2FA-48A7-BFE5-3BF634E09499}">
+                            XBMC2.RemoteRight()
+                        </Action>
+                        <Action XML_Guid="{E8D64ED1-8FDD-438A-9901-54D594A384C4}">
+                            EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Up" XML_Guid="{9B7B19E0-A187-4F19-B935-1DF20535109B}">
+                        <Event Name="MceRemote.Mce.Up" XML_Guid="{33D7A493-684A-4F5A-8B9F-AB18D2D7E10A}" />
+                        <Action XML_Guid="{D6410825-65CD-48E7-B52E-CA92E1B5F931}">
+                            XBMC2.RemoteUp()
+                        </Action>
+                        <Action XML_Guid="{5980E8B5-5A08-408E-8702-24B37E85EA9C}">
+                            EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Down" XML_Guid="{CD6921C1-C336-4524-95A1-0A1C58572B96}">
+                        <Event Name="MceRemote.Mce.Down" XML_Guid="{EAF17388-0477-4FD2-A34E-ECFC45EBCCA0}" />
+                        <Action XML_Guid="{6AEB7600-0422-4886-9B21-54443340B195}">
+                            XBMC2.RemoteDown()
+                        </Action>
+                        <Action XML_Guid="{D59DD7B2-3DCE-4976-A707-4B26BD55D2DB}">
+                            EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Select" XML_Guid="{6BF09687-FD20-4082-82A4-BE0C08F1B61F}">
+                        <Event Name="MceRemote.Mce.Ok" XML_Guid="{2346C88F-6265-4E5A-B4D4-CAB1827DAA9F}" />
+                        <Action Enabled="False" XML_Guid="{591B4156-49C2-4ACA-A297-FD3B4DAD0C9F}">
+                            XBMC2.RemoteSelect()
+                        </Action>
+                        <Action XML_Guid="{89E9F897-78C2-425D-B01C-837CA070E3CC}">
+                            Window.SendKeys(u'{Enter}')
+                        </Action>
+                        <Action XML_Guid="{5F03C477-F9E4-42B2-AEC3-D19A3EEB5428}">
+                            EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Back" XML_Guid="{9D4E6C4B-D635-471D-B09F-F0E4D3EBA172}">
+                        <Event Name="MceRemote.Mce.Back" XML_Guid="{FF767189-233B-45C5-8DA6-16456B57ACC1}" />
+                        <Action XML_Guid="{5B7C8785-B87D-45A6-AEC3-C5EEA707125C}">
+                            XBMC2.RemoteBack()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Menu" XML_Guid="{FB28F6C9-C083-4682-9FFE-B76A0E590AB2}">
+                        <Action XML_Guid="{2EC5ACF8-059E-4B29-9E30-0A89615F93E0}">
+                            XBMC2.RemoteMenu()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Info" XML_Guid="{F801E775-FDAC-4485-855A-72052DA220E0}">
+                        <Event Name="MceRemote.Mce.Details" XML_Guid="{70B48BC1-A1EC-43DE-A763-A192C5B3EBA2}" />
+                        <Action XML_Guid="{4CECD064-C1E8-4B3F-BD04-FFA6BC6F05C7}">
+                            XBMC2.RemoteInfo()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Display" XML_Guid="{1E182C0F-DB1D-4D1F-B9F5-E1A8BFA86318}">
+                        <Action XML_Guid="{F59BC657-2DAD-4A9C-AD9D-77902D24A137}">
+                            XBMC2.RemoteDisplay()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Title" XML_Guid="{9A4D4A33-EDF8-4E9D-8141-CD9394B01CB4}">
+                        <Event Name="MceRemote.Mce.Guide" XML_Guid="{9EBC9EA1-4D76-464F-A2FD-6D96D0AB1E2D}" />
+                        <Action XML_Guid="{8E2C9DE7-DF85-4561-812D-13D27AACBB6B}">
+                            XBMC2.RemoteTitle()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Play" XML_Guid="{20FFF7C4-4553-4204-A241-DE90B0DDB81B}">
+                        <Event Name="MceRemote.Mce.Play" XML_Guid="{CB9780DD-7BD3-4FE6-BEF3-CAB1F555A154}" />
+                        <Action XML_Guid="{761BD87D-2B05-458B-B9F4-7186E6775CE3}">
+                            XBMC2.RemotePlay()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Pause" XML_Guid="{B88DB611-FFF4-4F15-98C5-9D76B87F4928}">
+                        <Event Name="MceRemote.Mce.Pause" XML_Guid="{BA307338-E32E-45F9-A5EE-269FDAF37660}" />
+                        <Action XML_Guid="{387DF9C2-279B-4FDE-8244-9494C7CBD76E}">
+                            XBMC2.RemotePause()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Reverse" XML_Guid="{9BD2E162-A05B-40E6-9B97-DE0F0064BD76}">
+                        <Event Name="MceRemote.Mce.Rewind" XML_Guid="{7E500A26-1438-4611-B6F4-D3E4EF173E4B}" />
+                        <Action XML_Guid="{823CE0E1-5968-408D-9352-DCB87A678560}">
+                            XBMC2.RemoteReverse()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Forward" XML_Guid="{CF8CBF21-C397-4C9F-9A42-1469C187CC0D}">
+                        <Event Name="MceRemote.Mce.Forward" XML_Guid="{E6D95035-607D-4C23-A984-890426ECC8C6}" />
+                        <Action XML_Guid="{6F45474D-CEC4-43E8-9C1E-5F0EAC08AE5C}">
+                            XBMC2.RemoteForward()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Skip +" XML_Guid="{C13ABF07-7D75-4452-826A-05352486CD09}">
+                        <Event Name="MceRemote.Mce.Skip" XML_Guid="{0E23A56F-C330-4353-91E2-68A7919F0A60}" />
+                        <Action Enabled="False" XML_Guid="{E6EE9B94-ADCD-412D-A8DF-37EDC4DD383A}">
+                            XBMC2.RemoteSkipPlus()
+                        </Action>
+                        <Action XML_Guid="{178FF3E1-7B57-46EB-AC84-7B68D143248E}">
+                            Window.SendKeys(u'{1}', False, 2)
+                        </Action>
+                        <Action XML_Guid="{DA811DD5-13DC-4F24-A6FB-E4E6AF11675A}">
+                            Window.SendKeys(u'{Enter}', False, 2)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Skip -" XML_Guid="{C9DCFF24-7E86-489C-844C-225DF0431AE9}">
+                        <Event Name="MceRemote.Mce.Replay" XML_Guid="{676ABAF4-A619-497B-9DED-589C82D55BC6}" />
+                        <Action XML_Guid="{CE97E79E-117E-444C-A03F-C47AA48EF743}">
+                            XBMC2.RemoteSkipMinus()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Stop" XML_Guid="{9A71EF49-EB76-4665-8B20-822699CE6BF5}">
+                        <Event Name="MceRemote.Mce.Stop" XML_Guid="{4EF46191-7FD9-470A-9E48-C3A1F6723BF1}" />
+                        <Action XML_Guid="{75BA6A5B-D025-484D-8C28-2BC9E9A640BA}">
+                            XBMC2.RemoteStop()
+                        </Action>
+                        <Action XML_Guid="{454C1A95-133E-4935-8B16-40E546ECD9F7}">
+                            EventGhost.JumpIfLongPress(0.5, XmlIdLink(259))
+                        </Action>
+                    </Macro>
+                    <Macro Name="0" XML_Guid="{68A051A1-EC8A-473D-A132-1F58012FDCA4}">
+                        <Event Name="MceRemote.Mce.Num0" XML_Guid="{2B2C4E97-8D78-420F-8AED-DEF90E79D6D6}" />
+                        <Action XML_Guid="{FC8FFCC4-BE4E-449C-85D2-7851F11233DD}">
+                            XBMC2.Remote0()
+                        </Action>
+                    </Macro>
+                    <Macro Name="1" XML_Guid="{6E6014E2-0F16-4D57-9FC3-3927FD3A80A9}">
+                        <Event Name="MceRemote.Mce.Num1" XML_Guid="{38C5BB19-3D9D-4A5C-93D4-FC66E1DC2FC2}" />
+                        <Action XML_Guid="{775EC108-F42B-4648-BBE0-1A8A281B9EC9}">
+                            XBMC2.Remote1()
+                        </Action>
+                    </Macro>
+                    <Macro Name="2" XML_Guid="{82B76C09-9A3D-45E8-9B08-EF1890B7F6EC}">
+                        <Event Name="MceRemote.Mce.Num2" XML_Guid="{9006CC68-3E78-4A67-A41D-1AE14C185AE2}" />
+                        <Action XML_Guid="{9EB21461-C10B-4D28-BA72-62AD4E5C5D9A}">
+                            XBMC2.Remote2()
+                        </Action>
+                    </Macro>
+                    <Macro Name="3" XML_Guid="{67220E29-94CC-44D7-8359-39E98768B719}">
+                        <Event Name="MceRemote.Mce.Num3" XML_Guid="{165E12A1-1447-4AC5-9DEF-DFEF66186D1F}" />
+                        <Action XML_Guid="{9ED7EBD3-1D89-49E8-A37D-7E922BF65A6E}">
+                            XBMC2.Remote3()
+                        </Action>
+                    </Macro>
+                    <Macro Name="4" XML_Guid="{9E0B9D4C-94F7-475E-B8F0-E79B66B8BF9D}">
+                        <Event Name="MceRemote.Mce.Num4" XML_Guid="{716C440D-2AB0-4EE2-A74A-DB709542576A}" />
+                        <Action XML_Guid="{2A2FE868-8EC3-4B08-91ED-A59976F9545B}">
+                            XBMC2.Remote4()
+                        </Action>
+                    </Macro>
+                    <Macro Name="5" XML_Guid="{B03E9FB8-F3A2-41AC-A3F4-FB4A62D9D9C3}">
+                        <Event Name="MceRemote.Mce.Num5" XML_Guid="{091460A8-906B-4EBE-B618-E97D425472F0}" />
+                        <Action XML_Guid="{773D9D14-4942-46D8-B2E0-6E720BD65384}">
+                            XBMC2.Remote5()
+                        </Action>
+                    </Macro>
+                    <Macro Name="6" XML_Guid="{C6247C68-ADE8-4A12-9589-ADE98D29B94A}">
+                        <Event Name="MceRemote.Mce.Num6" XML_Guid="{E4EEACF0-E041-4A8D-B7C5-35E42D6741E1}" />
+                        <Action XML_Guid="{68CB9C76-ADA3-4301-9CC3-DB3186299708}">
+                            XBMC2.Remote6()
+                        </Action>
+                    </Macro>
+                    <Macro Name="7" XML_Guid="{DBD6566B-7ECB-4C5A-9FB7-65903531BE40}">
+                        <Event Name="MceRemote.Mce.Num7" XML_Guid="{BDE7A38B-CF42-4D44-80CE-27E96E908C79}" />
+                        <Action XML_Guid="{CA280E1C-ABC9-40C4-A4D9-086D8DCBE5EB}">
+                            XBMC2.Remote7()
+                        </Action>
+                    </Macro>
+                    <Macro Name="8" XML_Guid="{CFEC09CB-0425-42BE-9C98-426F4EEB6840}">
+                        <Event Name="MceRemote.Mce.Num8" XML_Guid="{3F385A6A-625E-40AA-BAC2-B14573255C2D}" />
+                        <Action XML_Guid="{0B2D4E91-07C6-481B-9A80-277517BD16AC}">
+                            XBMC2.Remote8()
+                        </Action>
+                    </Macro>
+                    <Macro Name="9" XML_Guid="{BB3B36F2-6A33-4CD0-B3C1-659EB5255B15}">
+                        <Event Name="MceRemote.Mce.Num9" XML_Guid="{169051DD-6F68-4D73-85C4-C319EB66702E}" />
+                        <Action XML_Guid="{E3D15475-F243-47DF-B3F5-57EAE2BB862F}">
+                            XBMC2.Remote9()
+                        </Action>
+                    </Macro>
+                    <Macro Name="My TV" XML_Guid="{163916BD-4959-4997-9597-B92BE297457A}">
+                        <Action XML_Guid="{2D341BD5-2B88-424F-BB81-C069ED464A3B}">
+                            XBMC2.RemoteMyTV()
+                        </Action>
+                    </Macro>
+                    <Macro Name="My Music" XML_Guid="{07F8143C-09A5-4CDC-BAFC-AB367C5E701E}">
+                        <Action XML_Guid="{B2BF3F58-C2B6-4AC8-8539-030E0B77371C}">
+                            XBMC2.RemoteMyMusic()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Go End" id="222" XML_Guid="{CAFFE58D-F278-466D-8AD4-9932AAB19B92}">
+                        <Action XML_Guid="{17F4ED37-3781-4194-AB09-7368C83AEF60}">
+                            Window.SendKeys(u'{End}', False, 2)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Go Top" id="224" XML_Guid="{5379718A-7CDE-4B54-9CE7-3974B0EBD913}">
+                        <Action XML_Guid="{17F4ED37-3781-4194-AB09-7368C83AEF60}">
+                            Window.SendKeys(u'{Home}', False, 2)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Record" XML_Guid="{17C4F76F-D787-4E38-A05A-E65FB0DC4F78}">
+                        <Event Name="MceRemote.Mce.Record" XML_Guid="{6D433599-358F-4C74-B2B3-6E5B12E4DFC7}" />
+                        <Action XML_Guid="{F0C938B5-25CE-4499-9352-998DF797F083}">
+                            XBMC2.RemoteRecord()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Start" XML_Guid="{DCB4342E-2213-4FCE-97F9-4EA727B08A5A}">
+                        <Action XML_Guid="{B577BBA3-DA44-409F-AB3F-471BCACAB742}">
+                            XBMC2.RemoteStart()
+                        </Action>
+                    </Macro>
+                    <Macro Name="CH +" XML_Guid="{49AC7C36-3B93-497C-BCE8-D5FDE37D99C4}">
+                        <Event Name="MceRemote.Mce.ChannelUp" XML_Guid="{3E703B0A-DED6-470E-B5A3-8ACA1606C348}" />
+                        <Action XML_Guid="{AFAD481D-2A6E-4577-B19B-FAB5C33BDA84}">
+                            XBMC2.Remotechannelplus()
+                        </Action>
+                        <Action XML_Guid="{454C1A95-133E-4935-8B16-40E546ECD9F7}">
+                            EventGhost.JumpIfLongPress(0.5, XmlIdLink(224))
+                        </Action>
+                    </Macro>
+                    <Macro Name="CH -" XML_Guid="{8A039CB2-D812-4396-A0AB-A7F65B3842C8}">
+                        <Event Name="MceRemote.Mce.ChannelDown" XML_Guid="{CE5A91C3-D4F2-476C-AEA3-09447992B41E}" />
+                        <Action XML_Guid="{AF7242F2-A508-496A-89BE-86202BFEDC09}">
+                            XBMC2.Remotechannelminus()
+                        </Action>
+                        <Action XML_Guid="{454C1A95-133E-4935-8B16-40E546ECD9F7}">
+                            EventGhost.JumpIfLongPress(0.5, XmlIdLink(222))
+                        </Action>
+                    </Macro>
+                    <Macro Name="PG +" XML_Guid="{D940432F-9591-4DCC-892B-C97EEC9B0EB9}">
+                        <Action XML_Guid="{28038626-9A47-4F9E-9A01-8E5E92D6DA32}">
+                            XBMC2.Remotepageplus()
+                        </Action>
+                    </Macro>
+                    <Macro Name="PG -" XML_Guid="{2AA30D6A-912F-42DC-91CB-E62998A72558}">
+                        <Action XML_Guid="{CDCEF27A-B3D2-483B-B478-95C60A0E23A5}">
+                            XBMC2.Remotepageminus()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Mute" XML_Guid="{87EED319-7CB2-4EAB-8D88-E4842333FFD1}">
+                        <Event Name="MceRemote.Mce.Mute" XML_Guid="{617CF28B-8547-4C7D-B61B-60B49CD520B8}" />
+                        <Action XML_Guid="{8C663B73-7ACD-462D-A1D3-46C1355B07FB}">
+                            XBMC2.RemoteMute()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Live TV" XML_Guid="{44C7F117-4827-4C70-BE1B-FDD9C31842E3}">
+                        <Action XML_Guid="{4C2F824E-655A-4115-8EAA-40262E3CEC28}">
+                            XBMC2.RemoteLiveTV()
+                        </Action>
+                    </Macro>
+                    <Macro Name="*" XML_Guid="{F4F9ED43-9FA7-456B-9947-355B6648057A}">
+                        <Event Name="MceRemote.Mce.Star" XML_Guid="{241B67B6-FE78-4122-BCB6-5A3A3FD463B3}" />
+                        <Action XML_Guid="{AE215050-6C8F-4940-BA04-66D5C6314638}">
+                            XBMC2.RemoteStar()
+                        </Action>
+                    </Macro>
+                    <Macro Name="#" XML_Guid="{1DBE4746-2119-4EFC-BF3C-07FEFFC1E519}">
+                        <Event Name="MceRemote.Pound" XML_Guid="{F6A6B059-376A-46BD-B0BF-F9E57B2EF8A1}" />
+                        <Action XML_Guid="{10ABBBDC-DBF2-43E7-B043-5946C24E815E}">
+                            XBMC2.Remote#()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Clear" XML_Guid="{B888B40B-F324-4281-A68C-A2B7A71A7AAB}">
+                        <Event Name="MceRemote.Mce.Escape" XML_Guid="{FD31B11A-0D62-4CD9-B888-478E00ACDDE7}" />
+                        <Action XML_Guid="{6D5E1C49-5AD1-444E-A960-D6A367DFCBF5}">
+                            Window.SendKeys(u'{Escape}', False)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Guide" XML_Guid="{F2394670-9C78-4948-B039-9F29D5E94E87}">
+                        <Action XML_Guid="{CDC07989-797F-45EF-BB13-BE4F2937E428}">
+                            XBMC2.Remoteguide()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Mark_Watched" id="259" XML_Guid="{3410F842-EA5C-4965-B66F-517463087D7B}">
+                        <Action XML_Guid="{0CE26BA4-A3EC-44C2-8AC7-468F4DFDB642}">
+                            Window.SendKeys(u'{W}', False, 2)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Teletext" XML_Guid="{96F43087-AEA7-444A-AC7D-1EF5FE8BB054}">
+                        <Action XML_Guid="{5AB5CCE7-F461-4E16-A371-2D787955EFC2}">
+                            XBMC2.Remoteteletext()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Red" XML_Guid="{A3CEF6C6-DD2B-453D-92C0-124903459C3A}">
+                        <Event Name="MceRemote.Mce.Red" XML_Guid="{5A56EFD4-67F9-4EBA-A5C7-2F2A4907952A}" />
+                        <Action XML_Guid="{1D8CC799-474D-41C1-AF15-76801A5E9963}">
+                            Window.SendKeys(u'{Tab}', False)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Green" XML_Guid="{985AB186-93D7-4E9F-A3E6-60DE44921797}">
+                        <Event Name="MceRemote.Mce.Green" XML_Guid="{905E5C3F-E7AC-4026-B205-A55254C58B14}" />
+                        <Action XML_Guid="{8145287F-9FAE-4B3C-B544-9DBF7758734C}">
+                            Window.SendKeys(u'{C}', False)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Yellow" XML_Guid="{74CDB121-2F62-4127-9501-099EF207ABFB}">
+                        <Event Name="MceRemote.Mce.Yellow" XML_Guid="{D027FE08-6A4D-449A-838B-3A15F794E984}" />
+                        <Action XML_Guid="{641459F9-79CD-444F-AB14-B7ED057A2FBA}">
+                            Window.SendKeys(u'{M}', False)
+                        </Action>
+                    </Macro>
+                    <Macro Name="Blue" XML_Guid="{3BF8C8B3-87BF-48A6-8664-7A875F659FC2}">
+                        <Event Name="MceRemote.Mce.Blue" XML_Guid="{459E0DCC-2E8A-4F3D-A5FD-CC0087F86EF1}" />
+                        <Action XML_Guid="{D072DEC9-D8D2-4037-A48E-F0391E2F31ED}">
+                            XBMC2.ShutdownMenu()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Subtitle" XML_Guid="{2EC02D14-60AE-4A31-9BA8-475E45071E88}">
+                        <Action XML_Guid="{1E7665F5-6F53-4558-868A-F4A2C4ABD5D5}">
+                            XBMC2.Remotesubtitle()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Language" XML_Guid="{9C7B78D4-3352-4C5E-A1F3-585AB5009072}">
+                        <Action XML_Guid="{02F8E5C3-A671-47E8-9784-AD67E0544948}">
+                            XBMC2.Remotelanguage()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Subtitlealign" XML_Guid="{9A3B0789-C5A5-494E-964F-5D95532D4356}">
+                        <Event Name="MceRemote.Mce.Teletext" XML_Guid="{15ED3671-1BA0-4601-AF84-AB794E7AEF07}" />
+                        <Action XML_Guid="{440A48B8-F9C6-4D61-82FD-F70EB5D1E507}">
+                            XBMC2.Subtitlealign()
+                        </Action>
+                        <Action XML_Guid="{454C1A95-133E-4935-8B16-40E546ECD9F7}">
+                            EventGhost.JumpIfLongPress(0.5, XmlIdLink(283))
+                        </Action>
+                    </Macro>
+                    <Macro Name="Disablesub:Jump" id="283" XML_Guid="{3FC54959-B15A-41C1-B186-DFE317986620}">
+                        <Action XML_Guid="{0CE26BA4-A3EC-44C2-8AC7-468F4DFDB642}">
+                            Window.SendKeys(u'{L}', False)
+                        </Action>
+                    </Macro>
+                </Folder>
+            </Folder>
+            <Folder Name="Actions" XML_Guid="{C849DF34-4EBD-4B93-AE18-D8451B1AC2F0}">
+                <Folder Name="General" XML_Guid="{06DDDBB2-464A-4EF0-AFF7-2E940475D483}">
+                    <Macro Name="Left" XML_Guid="{70C49B6A-7849-4164-A2AB-0A7A07A5C0B4}">
+                        <Action XML_Guid="{1D83DDCB-EF27-4728-B9E6-4D097565DFAA}">
+                            XBMC2.Left()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Right" XML_Guid="{55576619-B631-410A-A219-919A30184AD7}">
+                        <Action XML_Guid="{CAF0D31B-6AF3-4374-9E45-E3BC0B00AB36}">
+                            XBMC2.Right()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Up" XML_Guid="{9C9310FB-8FC2-4953-AC3E-EEE23834B446}">
+                        <Action XML_Guid="{CFC7EC86-904A-4931-B737-757A48BBAC39}">
+                            XBMC2.Up()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Down" XML_Guid="{794A34EB-B298-4AE7-9DA6-C5E7433728A0}">
+                        <Action XML_Guid="{BC4168AF-EB1A-4A2A-B992-862D595EA0EB}">
+                            XBMC2.Down()
+                        </Action>
+                    </Macro>
+                    <Macro Name="PageUp" XML_Guid="{85949CAE-3A5C-463C-A508-555D734DFD7D}">
+                        <Action XML_Guid="{3ED62934-EB31-4179-9A72-0A9FF67F4D11}">
+                            XBMC2.PageUp()
+                        </Action>
+                    </Macro>
+                    <Macro Name="PageDown" XML_Guid="{497009B6-C9B0-42E9-8A08-1940A64560FA}">
+                        <Action XML_Guid="{5B6713F9-D9BC-46FF-BC30-848BED711BAA}">
+                            XBMC2.PageDown()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Select" XML_Guid="{6CCED41B-9049-4802-BF9D-0E5818319EDB}">
+                        <Action XML_Guid="{58192814-040B-4235-8F3C-FEAC4F4C3242}">
+                            XBMC2.Select()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Highlight" XML_Guid="{6FD6A3BB-0B10-4A7C-A25B-A48612576069}">
+                        <Action XML_Guid="{0A32B013-4C58-47F4-98DB-F44B610A430B}">
+                            XBMC2.Highlight()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Parentfolder" XML_Guid="{7F04D044-B965-4860-9DEE-672FB5C7C4AE}">
+                        <Action XML_Guid="{6EE4FCF5-671C-4291-9DBD-95A72051FA26}">
+                            XBMC2.Parentfolder()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Back" XML_Guid="{49A905F2-3123-46B9-8BF4-139A40D6276E}">
+                        <Action XML_Guid="{AF781C53-2E28-4C14-A9A5-3C7C849F7A16}">
+                            XBMC2.Back()
+                        </Action>
+                    </Macro>
+                    <Macro Name="ParentDir" XML_Guid="{7D23E843-F63E-4FAB-94A8-531218A5DB98}">
+                        <Action XML_Guid="{A7362E5F-D176-43C9-A20A-7448CC129E2B}">
+                            XBMC2.ParentDir()
+                        </Action>
+                    </Macro>
+                    <Macro Name="PreviousMenu" XML_Guid="{BA9CF198-4AFF-4C5F-A732-CBE43B3D1015}">
+                        <Action XML_Guid="{81C71042-B98D-4A41-9A8E-FE3C3D827016}">
+                            XBMC2.PreviousMenu()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Info" XML_Guid="{B31539C5-C8A2-4CEF-8E0D-53C3B5C06C2D}">
+                        <Action XML_Guid="{322070D4-2FFE-41F9-9DAA-E33A74A979F5}">
+                            XBMC2.Info()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Screenshot" XML_Guid="{0902D68A-1F04-4992-89FD-9981C90DD076}">
+                        <Action XML_Guid="{87E20C48-0364-4D6D-BC8C-8F78D64AB6B9}">
+                            XBMC2.Screenshot()
+                        </Action>
+                    </Macro>
+                    <Macro Name="PowerOff" XML_Guid="{BEDE333A-53F4-402F-8D16-65BBAC0FB784}">
+                        <Action XML_Guid="{DEDFE5F0-CCA9-49AA-8D10-73C04B651D0D}">
+                            XBMC2.PowerOff()
+                        </Action>
+                    </Macro>
+                    <Macro Name="VolumeUp" XML_Guid="{638AE9C5-7758-4891-8081-C5BAB5F6AC47}">
+                        <Action XML_Guid="{ADD49ABA-87B1-4D77-A310-39AA25F1D24C}">
+                            XBMC2.VolumeUp()
+                        </Action>
+                    </Macro>
+                    <Macro Name="VolumeDown" XML_Guid="{72F39D5E-2901-4C6C-BD6D-A907B9E8953D}">
+                        <Action XML_Guid="{15C2798A-9EF5-4424-AF7F-BADD32F6824F}">
+                            XBMC2.VolumeDown()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Mute" XML_Guid="{5DAFA160-CF55-40F2-BCFF-66ADBCDB2DC6}">
+                        <Action XML_Guid="{6FD75BCE-EEE0-4D2F-B794-9EF7A1B8B60E}">
+                            XBMC2.Mute()
+                        </Action>
+                    </Macro>
+                    <Macro Name="ContextMenu" XML_Guid="{7B5D6ACD-8C4B-438A-A2EE-9D784EE1D6BD}">
+                        <Action XML_Guid="{7625D3AE-15EB-4E5A-9B85-727F503A8DB5}">
+                            XBMC2.ContextMenu()
+                        </Action>
+                    </Macro>
+                    <Macro Name="ScrollUp" XML_Guid="{BDB3404E-DE93-428D-ACA2-F4F087441F46}">
+                        <Action XML_Guid="{36A7F890-79B6-4825-A17C-0032ABB86F1D}">
+                            XBMC2.ScrollUp()
+                        </Action>
+                    </Macro>
+                    <Macro Name="ScrollDown" XML_Guid="{CD1FE336-55C4-4C6C-BAC3-BB52A618B684}">
+                        <Action XML_Guid="{65425E62-76B6-49B9-B706-981E4E2C14BB}">
+                            XBMC2.ScrollDown()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Close" XML_Guid="{2988F5B4-ACEB-4844-BEC9-EF7FD15F400A}">
+                        <Action XML_Guid="{CD528AF4-BD15-44EC-9254-5380D8DFFDDF}">
+                            XBMC2.Close()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Number0" XML_Guid="{C68B3CF1-6CA7-479B-B08E-7A622475BBF7}">
+                        <Action XML_Guid="{89B6971F-5DB0-4FDE-9979-AF5D51FFE936}">
+                            XBMC2.Number0()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Number1" XML_Guid="{E07DE180-E8D8-4945-AA2F-BFBD10C366DE}">
+                        <Action XML_Guid="{DABBDDA0-316D-4CBC-8BB7-E4D7B5FF41B8}">
+                            XBMC2.Number1()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Number2" XML_Guid="{E834D049-D30E-40DF-8BA5-0F75C2FFC2DB}">
+                        <Action XML_Guid="{034F15A3-23B4-4286-A6FC-F4A81CB29ED0}">
+                            XBMC2.Number2()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Number3" XML_Guid="{B11FAC34-B627-46D4-8578-F3193EB5C875}">
+                        <Action XML_Guid="{CDFCAA01-9D42-4E89-B5D8-7778D58B431B}">
+                            XBMC2.Number3()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Number4" XML_Guid="{1C95FDBB-468C-4004-B2BF-2EC274481E9B}">
+                        <Action XML_Guid="{EC08A302-411E-4516-80E4-947ED937F917}">
+                            XBMC2.Number4()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Number5" XML_Guid="{0A365926-F890-41AB-9C1C-DA4715644517}">
+                        <Action XML_Guid="{B7D24BD7-B432-4109-88FA-A9F6C2E7A116}">
+                            XBMC2.Number5()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Number6" XML_Guid="{2BEFF49B-196A-430D-894B-7D2D330758EC}">
+                        <Action XML_Guid="{18E70A80-F0B1-4C25-AF7A-BC2D0639207B}">
+                            XBMC2.Number6()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Number7" XML_Guid="{E123110D-C1B5-471A-9647-F88704B5E914}">
+                        <Action XML_Guid="{B6DB3065-A782-4270-B74C-824EE4119183}">
+                            XBMC2.Number7()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Number8" XML_Guid="{3174F77D-C7CD-4A95-91C9-86CB7B9451B8}">
+                        <Action XML_Guid="{5840AE07-A0DF-4475-A8C9-4E7A0AFEC1FD}">
+                            XBMC2.Number8()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Number9" XML_Guid="{0BAC8359-B594-4B20-87D8-C8EB33A0D905}">
+                        <Action XML_Guid="{4A913EF8-A0EB-4DA4-8023-8E57A7B272A3}">
+                            XBMC2.Number9()
+                        </Action>
+                    </Macro>
+                </Folder>
+                <Folder Name="Playlist" XML_Guid="{715DCD19-314C-425B-B28F-A88E0E74A94D}">
+                    <Macro Name="Playlist" XML_Guid="{7789BE16-08E0-4483-8D62-88A1D5011F4A}">
+                        <Action XML_Guid="{1BF8E2E2-8756-4FDB-B5E7-44C5F41B41B6}">
+                            XBMC2.Playlist()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Queue" XML_Guid="{D9CE29E3-D9CB-43A6-9848-E955307750C3}">
+                        <Action XML_Guid="{3D4538CB-256C-45D5-A1DA-5E7291BA639D}">
+                            XBMC2.Queue()
+                        </Action>
+                    </Macro>
+                    <Macro Name="MoveItemUp" XML_Guid="{341C49E5-11EA-4EE4-926F-91F70232AA2A}">
+                        <Action XML_Guid="{AFB56A6B-F981-428F-A52B-14C391677C34}">
+                            XBMC2.MoveItemUp()
+                        </Action>
+                    </Macro>
+                    <Macro Name="MoveItemDown" XML_Guid="{816CD3FA-7DE7-41B4-90AF-E8E6123CA45C}">
+                        <Action XML_Guid="{2D459FF7-3276-453A-BC67-C24BDB79E786}">
+                            XBMC2.MoveItemDown()
+                        </Action>
+                    </Macro>
+                </Folder>
+                <Folder Name="FullScreen Video" XML_Guid="{3D88F89A-C99E-45D9-B119-8DCFF5BBAEBC}">
+                    <Macro Name="StepForward" XML_Guid="{30CA7C81-9CAA-4750-9515-7E3020614212}">
+                        <Action XML_Guid="{B552D732-D96B-44AB-94C8-677C46117311}">
+                            XBMC2.StepForward()
+                        </Action>
+                    </Macro>
+                    <Macro Name="StepBack" XML_Guid="{3D8E42CA-3386-4936-8DB6-B29CFE879891}">
+                        <Action XML_Guid="{8E52699F-6E33-4FE9-BB0D-05304271BA9F}">
+                            XBMC2.StepBack()
+                        </Action>
+                    </Macro>
+                    <Macro Name="BigStepForward" XML_Guid="{9A9B400F-6B1E-41FE-BEA5-B3E65AD3A932}">
+                        <Action XML_Guid="{54B6B7EF-7598-422A-9856-A9956DE6247E}">
+                            XBMC2.BigStepForward()
+                        </Action>
+                    </Macro>
+                    <Macro Name="BigStepBack" XML_Guid="{18D031F2-2CD1-48AB-83D9-900F6DC9DCED}">
+                        <Action XML_Guid="{C572ADE0-CFD8-4456-9081-E78714FC52E7}">
+                            XBMC2.BigStepBack()
+                        </Action>
+                    </Macro>
+                    <Macro Name="SmallStepBack" XML_Guid="{894C941B-ECA6-4253-861F-BF97A36E0340}">
+                        <Action XML_Guid="{DF7BBE63-F48A-407A-ADE1-6DB3FB3E1ACE}">
+                            XBMC2.SmallStepBack()
+                        </Action>
+                    </Macro>
+                    <Macro Name="OSD" XML_Guid="{E7AA1086-27B5-4A68-B536-CF8B6F5D8F8B}">
+                        <Action XML_Guid="{8F507229-F8E9-4A6B-9787-D8EB716C43F6}">
+                            XBMC2.OSD()
+                        </Action>
+                    </Macro>
+                    <Macro Name="AspectRatio" XML_Guid="{D70B6D80-6315-469C-BACE-EF47FD0C3B02}">
+                        <Action XML_Guid="{EC0209DE-D2B1-4AEE-9CBD-CA59048DD623}">
+                            XBMC2.AspectRatio()
+                        </Action>
+                    </Macro>
+                    <Macro Name="ShowSubtitles" XML_Guid="{23675701-5734-474E-9330-474790BAF7AF}">
+                        <Action XML_Guid="{B2252EA3-5A3C-468F-9D38-A6D8F7133513}">
+                            XBMC2.ShowSubtitles()
+                        </Action>
+                    </Macro>
+                    <Macro Name="NextSubtitle" XML_Guid="{149DD61E-AE71-4A6D-927C-7833D7A92B78}">
+                        <Action XML_Guid="{DA628BFE-6D9A-465D-80E2-705F9C86A59E}">
+                            XBMC2.NextSubtitle()
+                        </Action>
+                    </Macro>
+                    <Macro Name="SubtitleDelay" XML_Guid="{AF85FF41-439A-4674-B2BA-756B9387E96D}">
+                        <Action XML_Guid="{28AA9494-DC5C-4949-84F2-5A677FD658BF}">
+                            XBMC2.Subtitledelay()
+                        </Action>
+                    </Macro>
+                    <Macro Name="SubtitleDelayMinus" XML_Guid="{F1D0315F-9E93-49BB-ADFC-5725C1F89D5E}">
+                        <Action XML_Guid="{DF9CE85B-0A1D-4BE3-9E6F-A45454D221AF}">
+                            XBMC2.SubtitleDelayMinus()
+                        </Action>
+                    </Macro>
+                    <Macro Name="SubtitleDelayPlus" XML_Guid="{E87C4577-090B-48B0-89F9-E62BD76E7D48}">
+                        <Action XML_Guid="{1D149ADA-51B1-4D15-B177-9865AB6D6A19}">
+                            XBMC2.SubtitleDelayPlus()
+                        </Action>
+                    </Macro>
+                    <Macro Name="AudioDelay" XML_Guid="{27470230-E012-498E-8F25-A03A376D3847}">
+                        <Action XML_Guid="{7FEE8EB8-0E4D-4FA4-97DF-5A1BFC3A79DF}">
+                            XBMC2.Audiodelay()
+                        </Action>
+                    </Macro>
+                    <Macro Name="AudioDelayMinus" XML_Guid="{87A393C1-2355-40FB-B349-3E5BA137CBBC}">
+                        <Action XML_Guid="{255C200A-0976-439D-8B28-DA612AF4888D}">
+                            XBMC2.AudioDelayMinus()
+                        </Action>
+                    </Macro>
+                    <Macro Name="AudioDelayPlus" XML_Guid="{C8EF5B4C-E43B-44D8-B948-9BBE0DAF632B}">
+                        <Action XML_Guid="{6A5C3EB8-FF61-493D-85BE-BFD11C3A92FF}">
+                            XBMC2.AudioDelayPlus()
+                        </Action>
+                    </Macro>
+                    <Macro Name="AudioNextLanguage" XML_Guid="{4EDFDD9D-5043-47CD-A81D-81ADBD92F1C5}">
+                        <Action XML_Guid="{2B175DEE-DB50-4BBB-AD79-B5C4406D52D5}">
+                            XBMC2.AudioNextLanguage()
+                        </Action>
+                    </Macro>
+                    <Macro Name="MplayerOSD" XML_Guid="{77B70284-F967-4C6F-86B1-F3B01200DA01}">
+                        <Action XML_Guid="{7132E88B-ABB9-40AC-B92D-8025F952E151}">
+                            XBMC2.mplayerosd()
+                        </Action>
+                    </Macro>
+                    <Macro Name="ShowTime" XML_Guid="{D8F29F3D-FF1C-4B63-9272-7F681D05EA48}">
+                        <Action XML_Guid="{56BDB104-6FF4-4AC0-A4AE-C0E388F4E382}">
+                            XBMC2.ShowTime()
+                        </Action>
+                    </Macro>
+                    <Macro Name="ShowVideoMenu" XML_Guid="{F1459FF1-74F8-4462-826F-3BB256FF4F95}">
+                        <Action XML_Guid="{DAFB8C17-57FA-4DEA-94DF-7FC9805940B2}">
+                            XBMC2.ShowVideoMenu()
+                        </Action>
+                    </Macro>
+                    <Macro Name="IncreasePAR" XML_Guid="{F78C4062-963D-4F0C-88AC-19EE16FEAC2C}">
+                        <Action XML_Guid="{E289A879-0DC7-4154-ACBA-4B2271DDAA05}">
+                            XBMC2.Increasepar()
+                        </Action>
+                    </Macro>
+                    <Macro Name="DecreasePAR" XML_Guid="{0C848FC0-3BA3-4D1E-BBAF-AECA99F7372C}">
+                        <Action XML_Guid="{6CD6B7F5-CB8A-4831-9599-B9B3DE163A81}">
+                            XBMC2.Decreasepar()
+                        </Action>
+                    </Macro>
+                </Folder>
+                <Folder Name="Shutdown related" XML_Guid="{CA1C4011-D603-4A72-8EA2-14F027C4EBEC}">
+                    <Macro Name="Quit" XML_Guid="{2A6562C0-C872-4976-A07E-70EA0AF3036B}">
+                        <Action XML_Guid="{3C946D12-B126-4BC6-8ACB-EC5074239221}">
+                            XBMC2.Quit()
+                        </Action>
+                    </Macro>
+                    <Macro Name="RestartApp" XML_Guid="{A8D0E1C3-3E2B-42D2-A27B-0EBA8E614049}">
+                        <Action XML_Guid="{8B18DBCB-2FA6-43BB-B81F-491C5D8C4367}">
+                            XBMC2.RestartApp()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Reset Computer" XML_Guid="{1E6FD999-411D-4B8C-88A4-7894C49EE1BB}">
+                        <Action XML_Guid="{1099C2DC-2B6A-43E2-81BC-7D8E4BC30474}">
+                            XBMC2.Reset()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Shutdown Computer" XML_Guid="{740310F2-14D4-48EC-9632-BC1EC24C9F72}">
+                        <Action XML_Guid="{BFE7CEEE-7044-4A16-9D4E-43F1ECB10296}">
+                            XBMC2.Shutdown()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Powerdown" XML_Guid="{DFD357CA-EEAA-483A-9283-B8FE6CF094A9}">
+                        <Action XML_Guid="{7828E9CA-7C23-49D0-9D12-2DDECB70DFAE}">
+                            XBMC2.Powerdown()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Suspend" XML_Guid="{40971E9D-F1AF-43E6-B46A-4BCD44F58DAF}">
+                        <Action XML_Guid="{7635E786-FCFA-442D-9F4F-F82BE882C195}">
+                            XBMC2.Suspend()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Hibernate" XML_Guid="{FDB031DE-4D1B-4728-99B9-9ACCD42362D2}">
+                        <Action XML_Guid="{CC8D2637-F7DA-4628-A572-47A715E9D88A}">
+                            XBMC2.Hibernate()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Reboot Computer" XML_Guid="{57398403-B8C6-4D75-B84F-000434136E84}">
+                        <Action XML_Guid="{3FDAE28A-1552-4185-9B6F-3DF9582E6676}">
+                            XBMC2.Reboot()
+                        </Action>
+                    </Macro>
+                    <Macro Name="Restart Computer" XML_Guid="{4389E084-B3E6-4A73-A571-DD86B075723B}">
+                        <Action XML_Guid="{62840CDE-3D69-41D9-98CB-1627A64C0399}">
+                            XBMC2.Restart()
+                        </Action>
+                    </Macro>
+                </Folder>
+            </Folder>
+            <Folder Name="Windows" XML_Guid="{609D1CBB-ED21-4D3E-965E-FE0B0402D414}">
+                <Macro Name="Show Movies Screen" XML_Guid="{8612313A-503C-406F-A483-D3BE05F342DE}">
+                    <Action XML_Guid="{64B733A2-DC6C-4B8A-9CA2-51FE43F7FADF}">
+                        XBMC2.MyMovies()
+                    </Action>
+                </Macro>
+                <Macro Name="Show TV Shows Screen" XML_Guid="{BBE0CAEB-600B-4523-AA00-0A40CE0ADA64}">
+                    <Action XML_Guid="{83069889-5722-4E9C-858D-917CB44C803E}">
+                        XBMC2.MyTVShows()
+                    </Action>
+                </Macro>
+                <Macro Name="Show Shutdown Menu" XML_Guid="{DAE55737-D421-4840-8023-DE27C282584F}">
+                    <Action XML_Guid="{3423B1FE-BFCC-486F-9CE6-6666DE07C53C}">
+                        XBMC2.ShutdownMenu()
+                    </Action>
+                </Macro>
+                <Macro Name="Home" XML_Guid="{3B76DF29-53FA-499D-B14A-A282249E0F82}">
+                    <Action XML_Guid="{8A8AB57F-EDD6-440A-9A48-BA7E39E37DC8}">
+                        XBMC2.Home()
+                    </Action>
+                </Macro>
+                <Macro Name="Programs" XML_Guid="{A74E9E9F-6BD2-44BB-AA3B-066F8C3B56D7}">
+                    <Action XML_Guid="{24324047-AE2D-42E0-AE56-7990AB474665}">
+                        XBMC2.Programs()
+                    </Action>
+                </Macro>
+                <Macro Name="Pictures" XML_Guid="{FBBD3E24-B7CE-497D-9A81-EB5F5DAA905A}">
+                    <Action XML_Guid="{17E9EBB4-A10E-4FB6-8CD9-BEA9E1E5CA72}">
+                        XBMC2.Pictures()
+                    </Action>
+                </Macro>
+                <Macro Name="Files" XML_Guid="{8B13F84C-7F3F-4567-A778-6D7A0984A30C}">
+                    <Action XML_Guid="{763D987E-74BD-4E0E-84A3-50C889FB6BFE}">
+                        XBMC2.Files()
+                    </Action>
+                </Macro>
+                <Macro Name="Settings" XML_Guid="{52F1AE89-732B-4D50-97C2-60AB58929E94}">
+                    <Action XML_Guid="{10BE059F-4A40-42BD-8CDE-D4C8BC100C82}">
+                        XBMC2.Settings()
+                    </Action>
+                </Macro>
+                <Macro Name="Music" XML_Guid="{67081512-62BE-47D6-B07B-5F79B0D762B4}">
+                    <Action XML_Guid="{F15722BF-4DEC-4C94-B7C5-68646AEA6F5B}">
+                        XBMC2.Music()
+                    </Action>
+                </Macro>
+                <Macro Name="Musicfiles" XML_Guid="{658B7101-D896-4835-A8A3-5117C6967E5D}">
+                    <Action XML_Guid="{032615F5-5965-4B38-8D24-B1B35C340D66}">
+                        XBMC2.Musicfiles()
+                    </Action>
+                </Macro>
+                <Macro Name="Musiclibrary" XML_Guid="{1E84B17C-9E8C-4AA9-962F-FF69318BD7F1}">
+                    <Action XML_Guid="{539EEC1D-65C0-443F-B334-646994597F46}">
+                        XBMC2.Musiclibrary()
+                    </Action>
+                </Macro>
+                <Macro Name="Musicplaylist" XML_Guid="{B1FE933D-5158-4B29-9115-968992D06C9D}">
+                    <Action XML_Guid="{875BA597-8F77-45D3-9096-4C3B036A4D3E}">
+                        XBMC2.Musicplaylist()
+                    </Action>
+                </Macro>
+                <Macro Name="Musicplaylisteditor" XML_Guid="{1A18478C-DA0D-4C52-9300-D95B0DA28C8D}">
+                    <Action XML_Guid="{C3CA43B6-22CB-49B9-A39E-EC74A7C3D7DF}">
+                        XBMC2.Musicplaylisteditor()
+                    </Action>
+                </Macro>
+                <Macro Name="Musicinformation" XML_Guid="{EC7AB171-AF52-4B04-A3A7-8DA64BF7CB45}">
+                    <Action XML_Guid="{728D0BCD-148B-4301-8240-733DB8073702}">
+                        XBMC2.Musicinformation()
+                    </Action>
+                </Macro>
+                <Macro Name="Video" XML_Guid="{7E0D7230-B86B-4D23-A5B1-44D0689F50DB}">
+                    <Action XML_Guid="{657731D0-9A3B-4863-92B5-27F6702B08D5}">
+                        XBMC2.Video()
+                    </Action>
+                </Macro>
+                <Macro Name="Videofiles" XML_Guid="{4DB67537-D5D6-4DB3-9A54-BCBE9B1EE1E6}">
+                    <Action XML_Guid="{0061D5BE-C1B6-4C70-AFB4-BDAC5BE0EFE5}">
+                        XBMC2.Videofiles()
+                    </Action>
+                </Macro>
+                <Macro Name="Videolibrary" XML_Guid="{56B19772-9590-48E3-A676-042E350011EE}">
+                    <Action XML_Guid="{4EFDE853-8E9F-4E54-9B13-D7EE5FC0BA2C}">
+                        XBMC2.Videolibrary()
+                    </Action>
+                </Macro>
+                <Macro Name="Videoplaylist" XML_Guid="{EFF01196-5FED-4F77-9CE3-9A1C5AAA13E3}">
+                    <Action XML_Guid="{B3C0B631-A9F3-49C6-9D6F-BAA86159E0A3}">
+                        XBMC2.Videoplaylist()
+                    </Action>
+                </Macro>
+                <Macro Name="Systeminfo" XML_Guid="{A0BE7847-9714-45E6-97C8-D03DF4FEACB3}">
+                    <Action XML_Guid="{00653F75-379E-47F0-A574-DFED053620A8}">
+                        XBMC2.Systeminfo()
+                    </Action>
+                </Macro>
+                <Macro Name="Guicalibration" XML_Guid="{BBFDE586-C0AB-4DED-BC8A-3E9EB9D05B7E}">
+                    <Action XML_Guid="{4C75B909-1742-4343-8971-F4F153EBB52F}">
+                        XBMC2.Guicalibration()
+                    </Action>
+                </Macro>
+                <Macro Name="Screencalibration" XML_Guid="{DFEA0BD0-33C5-460A-8406-DF8FE775939A}">
+                    <Action XML_Guid="{BA32FD8F-55E3-4E32-BBD8-6AF64D8BCEB3}">
+                        XBMC2.Screencalibration()
+                    </Action>
+                </Macro>
+                <Macro Name="Picturessettings" XML_Guid="{F2D62438-2A84-4C9C-8543-3F9AE526F959}">
+                    <Action XML_Guid="{4EF210F2-D4C6-4FA3-9AFE-2DE04F0BDB8F}">
+                        XBMC2.Picturessettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Programssettings" XML_Guid="{81A6951D-AFA6-4041-A331-95709DBFDC84}">
+                    <Action XML_Guid="{E9FD4D1B-D46B-434B-98F6-913A8472D076}">
+                        XBMC2.Programssettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Weathersettings" XML_Guid="{2DED3618-6A21-4552-A62F-CA099CEBD342}">
+                    <Action XML_Guid="{54B447C5-CBC8-46CC-B2D7-515ADB133837}">
+                        XBMC2.Weathersettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Musicsettings" XML_Guid="{5AB19BD3-4A59-4DB9-8130-109DD4C8F2AE}">
+                    <Action XML_Guid="{90CF47FC-6E44-49D5-B52A-D84F984F3BC7}">
+                        XBMC2.Musicsettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Systemsettings" XML_Guid="{462DD5CF-BC8C-4534-AD12-FB5E05602903}">
+                    <Action XML_Guid="{07C9D8FD-0800-4378-A051-B676136E65B1}">
+                        XBMC2.Systemsettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Videossettings" XML_Guid="{539D880A-2D26-4DB7-858B-9BC1332A291E}">
+                    <Action XML_Guid="{5CA93CB5-C62A-409D-A8CE-4C01783BFB4D}">
+                        XBMC2.Videossettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Networksettings" XML_Guid="{EE862C81-B470-4346-B51D-1918B8FB1A26}">
+                    <Action XML_Guid="{14039248-C270-4F69-B6BD-2934CE6C2E72}">
+                        XBMC2.Networksettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Appearancesettings" XML_Guid="{CDCBD556-136E-4E09-A1AC-69E1CB49E8FD}">
+                    <Action XML_Guid="{22437352-8E29-49D9-8EA3-C80DC9ED3B6B}">
+                        XBMC2.Appearancesettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Scripts" XML_Guid="{BDA4A08E-20EF-4AC7-AB0D-69BBE096B02B}">
+                    <Action XML_Guid="{78146A6A-BADB-4A0F-89C6-E45A109B3B74}">
+                        XBMC2.Scripts()
+                    </Action>
+                </Macro>
+                <Macro Name="Gamesaves" XML_Guid="{8345CEC9-96F7-46F1-B422-4202F39B73BD}">
+                    <Action XML_Guid="{4B15F08D-6586-46AC-B6E1-748A6DF0C032}">
+                        XBMC2.Gamesaves()
+                    </Action>
+                </Macro>
+                <Macro Name="Profiles" XML_Guid="{4D90D584-7B82-4511-9CA2-734B6440E779}">
+                    <Action XML_Guid="{FA999D7A-EC67-4941-B692-AE59C33285CC}">
+                        XBMC2.Profiles()
+                    </Action>
+                </Macro>
+                <Macro Name="Virtualkeyboard" XML_Guid="{CFCFACD4-8F80-41C4-AAC1-23A9D4832DC4}">
+                    <Action XML_Guid="{028AE62F-E82B-44C8-B80D-DD4DFC0BC20C}">
+                        XBMC2.Virtualkeyboard()
+                    </Action>
+                </Macro>
+                <Macro Name="Volumebar" XML_Guid="{72D5A6F4-D376-4A6D-BD8F-2B779A65AED8}">
+                    <Action XML_Guid="{829206DD-6AC4-4AF0-BADB-619A47222072}">
+                        XBMC2.Volumebar()
+                    </Action>
+                </Macro>
+                <Macro Name="Favourites" XML_Guid="{CAC930A4-35E9-4E2D-A8DB-1CCAD57921BF}">
+                    <Action XML_Guid="{AEFC6BE8-F1DB-4EF9-8E5C-DE32C6B070EC}">
+                        XBMC2.Favourites()
+                    </Action>
+                </Macro>
+                <Macro Name="Musicosd" XML_Guid="{C904C141-6B80-4138-B307-68A891052CD3}">
+                    <Action XML_Guid="{60D6A08D-F282-4738-8838-A1D2C5F52F0B}">
+                        XBMC2.Musicosd()
+                    </Action>
+                </Macro>
+                <Macro Name="Visualisationsettings" XML_Guid="{C0209C4C-D4BE-457F-A031-7913BCF4990F}">
+                    <Action XML_Guid="{3C691DFE-FD94-4965-860B-CB0C38CE6413}">
+                        XBMC2.Visualisationsettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Visualisationpresetlist" XML_Guid="{4141CB28-CD58-4041-8054-09546C5FF963}">
+                    <Action XML_Guid="{AF186E82-5374-40C1-AD66-38C7B741D088}">
+                        XBMC2.Visualisationpresetlist()
+                    </Action>
+                </Macro>
+                <Macro Name="Osdvideosettings" XML_Guid="{3CC4A6A5-AD22-4D6D-B19D-2AC2D18B12DE}">
+                    <Action XML_Guid="{3ACF12B1-F8C8-415E-84AD-3BAEDEBE6126}">
+                        XBMC2.Osdvideosettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Osdaudiosettings" XML_Guid="{255A2D91-8764-4658-999B-9F77ED361ADD}">
+                    <Action XML_Guid="{27C1C0E3-3633-4F39-8961-95316CB006A0}">
+                        XBMC2.Osdaudiosettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Videobookmarks" XML_Guid="{24D666FD-1EFE-4B57-967A-1F60B81A313E}">
+                    <Action XML_Guid="{B8AEC1DB-0F2B-4CCB-A93B-33203ECA3600}">
+                        XBMC2.Videobookmarks()
+                    </Action>
+                </Macro>
+                <Macro Name="Profilesettings" XML_Guid="{63E688CE-DA22-4594-AC0D-C4764F308B2B}">
+                    <Action XML_Guid="{A3C500D1-1B63-4EE6-95F2-7C85EF4901F7}">
+                        XBMC2.Profilesettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Locksettings" XML_Guid="{26D98443-FDB2-4E47-847C-BBDB3FC5EFC1}">
+                    <Action XML_Guid="{4C21F3C5-8AF6-478E-BDF8-A2044371E00D}">
+                        XBMC2.Locksettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Contentsettings" XML_Guid="{9F416358-6994-4102-A86B-616916FEA94D}">
+                    <Action XML_Guid="{67CC93F1-F5ED-4496-A0CF-96EC80AF3E7A}">
+                        XBMC2.Contentsettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Networksetup" XML_Guid="{DBD80A1B-CEEF-4039-BAE9-C911601CAD70}">
+                    <Action XML_Guid="{89E405BB-F1E8-4888-AEF5-7C54BC53961C}">
+                        XBMC2.Networksetup()
+                    </Action>
+                </Macro>
+                <Macro Name="Smartplaylisteditor" XML_Guid="{A79D5ACE-7AD1-4017-8E4E-74F977995013}">
+                    <Action XML_Guid="{DFF36343-5ABA-4C4F-9CDA-DB3F6868A7B2}">
+                        XBMC2.Smartplaylisteditor()
+                    </Action>
+                </Macro>
+                <Macro Name="Smartplaylistrule" XML_Guid="{D5E24723-9A0A-41F2-85F5-9FE307D2C4D5}">
+                    <Action XML_Guid="{91B0F765-0C0D-4FE9-8C68-5434F10F8D31}">
+                        XBMC2.Smartplaylistrule()
+                    </Action>
+                </Macro>
+                <Macro Name="Movieinformation" XML_Guid="{2521CB6D-AC53-4691-AC02-76D3458FD075}">
+                    <Action XML_Guid="{474B40BE-964D-4E48-A10B-3BA6CE29440A}">
+                        XBMC2.Movieinformation()
+                    </Action>
+                </Macro>
+                <Macro Name="Scriptsdebuginfo" XML_Guid="{6AB47EE5-B50C-4789-8635-A887E7535362}">
+                    <Action XML_Guid="{62378A66-B3F3-478F-8BEB-B15B1A757D7D}">
+                        XBMC2.Scriptsdebuginfo()
+                    </Action>
+                </Macro>
+                <Macro Name="Fullscreenvideo" XML_Guid="{7076ED7D-AD52-4C64-960F-A50A4303C01D}">
+                    <Action XML_Guid="{B4FE7BC5-5D6D-4C8D-AD1A-BD8C18B3D60A}">
+                        XBMC2.Fullscreenvideo()
+                    </Action>
+                </Macro>
+                <Macro Name="Visualisation" XML_Guid="{41D8B3C0-A42E-49D5-BBFD-691CE30ADC59}">
+                    <Action XML_Guid="{D5C58AF7-4F87-415F-A021-E1D662E3FEC2}">
+                        XBMC2.Visualisation()
+                    </Action>
+                </Macro>
+                <Macro Name="Slideshow" XML_Guid="{46D49258-E14B-42BD-B9EE-255688610FF8}">
+                    <Action XML_Guid="{5190BE22-ACA1-4D02-AA26-8B2BAE7E63A4}">
+                        XBMC2.Slideshow()
+                    </Action>
+                </Macro>
+                <Macro Name="Filestackingdialog" XML_Guid="{75ACF63E-A071-482E-AA3F-49639B38CEA1}">
+                    <Action XML_Guid="{36ECEBE7-D166-4822-B505-3DE796C6973C}">
+                        XBMC2.Filestackingdialog()
+                    </Action>
+                </Macro>
+                <Macro Name="Weather" XML_Guid="{408959C6-F772-4F76-97BB-D95427E6EDDA}">
+                    <Action XML_Guid="{9049349A-49A1-4CFF-A309-33FA932E8C31}">
+                        XBMC2.Weather()
+                    </Action>
+                </Macro>
+                <Macro Name="Screensaver" XML_Guid="{13E476F7-D193-41E0-8077-66F04409BD3B}">
+                    <Action XML_Guid="{E051B48B-FA70-4440-9852-46A08B6EC45F}">
+                        XBMC2.Screensaver()
+                    </Action>
+                </Macro>
+                <Macro Name="Videoosd" XML_Guid="{3118E6EB-03B1-4273-895C-D4A183A0B312}">
+                    <Action XML_Guid="{08E64E40-3A28-447E-8E1B-E479BF89DE45}">
+                        XBMC2.Videoosd()
+                    </Action>
+                </Macro>
+                <Macro Name="Videomenu" XML_Guid="{CF16CE77-6F02-4890-B7F7-9A377A57E3CC}">
+                    <Action XML_Guid="{5E30DEC0-B5A9-48A0-A451-F1687B0B45B4}">
+                        XBMC2.Videomenu()
+                    </Action>
+                </Macro>
+                <Macro Name="Filebrowser" XML_Guid="{37A79FEA-1DAA-49CA-91A7-25703D9AD4D2}">
+                    <Action XML_Guid="{41E5BB7E-1002-4A50-AA27-52580675CA86}">
+                        XBMC2.Filebrowser()
+                    </Action>
+                </Macro>
+                <Macro Name="Startup" XML_Guid="{DDA5A088-A64E-4FD4-961B-27719BDA2BC3}">
+                    <Action XML_Guid="{BF51E405-5D58-4E1C-9272-2897994BC82F}">
+                        XBMC2.Startup()
+                    </Action>
+                </Macro>
+                <Macro Name="Startwindow" XML_Guid="{20158A74-C559-467B-ADFE-C5388A46700F}">
+                    <Action XML_Guid="{13656BCE-4C52-4E75-9517-B58C41D11574}">
+                        XBMC2.Startwindow()
+                    </Action>
+                </Macro>
+                <Macro Name="Loginscreen" XML_Guid="{9D2B6CF8-F8DD-4832-B93B-9E4A64DF010D}">
+                    <Action XML_Guid="{464914E4-5E12-4D24-A8A7-3885EF39F69B}">
+                        XBMC2.Loginscreen()
+                    </Action>
+                </Macro>
+                <Macro Name="Musicoverlay" XML_Guid="{1CD9B33D-D6ED-44E8-8546-1DCD2A4160C2}">
+                    <Action XML_Guid="{6C62280E-5988-47D3-A0FF-F8966F591495}">
+                        XBMC2.Musicoverlay()
+                    </Action>
+                </Macro>
+                <Macro Name="Videooverlay" XML_Guid="{F73BADC5-7D76-420D-A8C0-91A9B89405B9}">
+                    <Action XML_Guid="{648683CA-B28B-4251-8EDB-ADA3F4092C0C}">
+                        XBMC2.Videooverlay()
+                    </Action>
+                </Macro>
+                <Macro Name="Pictureinfo" XML_Guid="{E5633DD2-7531-48D8-BA4C-0F11699F6079}">
+                    <Action XML_Guid="{708428C3-CE0A-44F0-B11F-F1AE87270394}">
+                        XBMC2.Pictureinfo()
+                    </Action>
+                </Macro>
+                <Macro Name="Pluginsettings" XML_Guid="{179F82AA-6AD9-4B6F-BC69-C81FFBD11051}">
+                    <Action XML_Guid="{5DC8414F-DFC2-40A7-BAEF-F936C91A7C51}">
+                        XBMC2.Pluginsettings()
+                    </Action>
+                </Macro>
+                <Macro Name="Fullscreeninfo" XML_Guid="{AD8C3A0C-E128-4981-A5D0-F2D6D90ECBFB}">
+                    <Action XML_Guid="{29D5F721-CBAA-431A-ABC9-31EC29937489}">
+                        XBMC2.Fullscreeninfo()
+                    </Action>
+                </Macro>
+                <Macro Name="Player Controls" XML_Guid="{9ADEA449-DB69-4C6E-9B20-F703C3EB1D26}">
+                    <Action XML_Guid="{6D274EDF-348C-43A5-9406-C613F3ABD27C}">
+                        XBMC2.PlayerControls()
+                    </Action>
+                </Macro>
+            </Folder>
+        </Folder>
+        <Folder Name="Sony" id="557" Enabled="False" XML_Guid="{6983364F-FCC7-4BF6-A1DF-9A7E8928FF8A}">
+            <Macro Name="0" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Num0" XML_Guid="{B2754084-9D56-4E13-AF1D-CA59CBCE5817}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAAJAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="1" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Num1" XML_Guid="{E9677850-087D-4726-AAFD-A6C185409DF9}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAAAAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="2" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Num2" XML_Guid="{0F7BB30C-C5B3-48D4-80AB-F329DDAC840F}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAABAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="3" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Num3" XML_Guid="{F970B8D7-778A-48AF-9880-3EAB090D7ADD}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAACAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="4" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Num4" XML_Guid="{08DE8D92-76DA-4B63-9247-F20B98B9B2CA}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAADAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="5" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Num5" XML_Guid="{0CC019D1-655F-416D-B59E-C7153DB6A1D1}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAAEAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="6" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Num6" XML_Guid="{39ECC46E-3497-476C-BA04-18EA36D473D9}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAAFAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="7" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Num7" XML_Guid="{050CFE6B-35C5-41F5-A2F9-5616A05716FF}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAAGAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="8" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Num8" XML_Guid="{8287CF22-671A-4411-AE18-2CD6B2990FED}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAAHAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="9" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Num9" XML_Guid="{F4CC8342-B76F-4BF5-8146-A4BAC2EF7DC8}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAAIAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="CursorUp" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Up" XML_Guid="{C9FE3491-082A-40EE-B90D-0B806684B487}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAgAAAJcAAABPAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+                <Action XML_Guid="{5980E8B5-5A08-408E-8702-24B37E85EA9C}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="CursorDown" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Down" XML_Guid="{44C8DC96-AB38-4D11-BD69-56854A1991C9}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAgAAAJcAAABQAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+                <Action XML_Guid="{5980E8B5-5A08-408E-8702-24B37E85EA9C}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="CursorRight" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Right" XML_Guid="{57D3300C-1AB3-4B21-A8CF-7CE18917FBBF}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAgAAAJcAAABOAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+                <Action XML_Guid="{5980E8B5-5A08-408E-8702-24B37E85EA9C}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Confirm" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Ok" XML_Guid="{DB613228-6B0C-41D1-B2E1-B26A5BBAE808}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAABlAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="GGuide" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Left" XML_Guid="{8688A052-2DE4-4340-9ACD-F6D325D1B568}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAAOAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="ChannelUp" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.ChannelUp" XML_Guid="{12126CD7-9557-4D99-8E00-50A684F87CA6}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAAQAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+                <Action XML_Guid="{5980E8B5-5A08-408E-8702-24B37E85EA9C}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="ChannelDown" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.ChannelDown" XML_Guid="{F5DFA659-C865-4018-878C-2AFD3F65D822}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAARAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+                <Action XML_Guid="{5980E8B5-5A08-408E-8702-24B37E85EA9C}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Teletext" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Teletext" XML_Guid="{D9ED39B8-CAC7-410D-8847-FEC60636A526}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAA/Aw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="Return" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Back" XML_Guid="{12B2366C-B56C-40D3-9E5E-865D77B1E918}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAgAAAJcAAAAjAw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="Display" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Details" XML_Guid="{DAD1D0A8-7270-4F36-BA3F-071CE18DDDC3}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAA6Aw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="SettingsMenu" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Play" XML_Guid="{FAF0047C-600B-4FD4-8F2F-0AF120E33746}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAgAAABoAAAB5Aw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+            <Macro Name="Previous Channel" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+                <Event Name="MceRemote.Mce.Replay" XML_Guid="{AC31A6C7-7415-489F-A2C7-5DB6F2744D3C}" />
+                <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                    System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAA7Aw==', False, False, u'', True, False, False, False, False)
+                </Action>
+            </Macro>
+        </Folder>
+        <Folder Name="Volume Control" Enabled="False" XML_Guid="{C824E741-8CAE-4A0E-9FA7-E885300B56E7}">
+            <Macro Name="Mute Volume" XML_Guid="{3691F5A3-9D01-4285-937B-15A5DDE4BE1A}">
+                <Event Name="MceRemote.Mce.Mute" XML_Guid="{F50EEBE6-B298-44C2-8BD5-4AE5B386D1F9}" />
+                <Action XML_Guid="{9878FC2D-3C99-43BE-AFFC-356239CAFB29}">
+                    EventGhost.ShowOSD(u'Sound {("Off", "On")[eg.result]}', u'0;-36;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+                </Action>
+                <Action XML_Guid="{BEEC205E-79D9-4666-84C8-1613FB3F6D08}">
+                    System.ToggleMute()
+                </Action>
+            </Macro>
+            <Macro Name="Decrease Volume" XML_Guid="{677D31F8-0005-4CB1-A1B9-3F309A296DD6}">
+                <Event Name="MceRemote.Mce.VolumeDown" XML_Guid="{98140AF3-1183-4AE5-A4DB-FAD19EC5BBA3}" />
+                <Action XML_Guid="{9208F6C1-D898-4C88-8C35-AE982C9674A9}">
+                    System.ChangeMasterVolumeBy(-2.0)
+                </Action>
+                <Action Enabled="False" XML_Guid="{9F54867E-69F3-481E-BEED-375A38E6E4AD}">
+                    EventGhost.ShowOSD(u'Volume {int(round(eg.result))}%', u'0;-36;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+                </Action>
+                <Action XML_Guid="{08983823-048E-4E9A-A1A3-AEF230DC85AC}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+            <Macro Name="Increase Volume" XML_Guid="{6B4F1C68-00D5-462E-BFD9-9DFC65EF146D}">
+                <Event Name="MceRemote.Mce.VolumeUp" XML_Guid="{B5A66CD3-05F4-49AF-A837-4D5A7DBB6FCC}" />
+                <Action XML_Guid="{68C96F97-CF71-428D-B641-C7B414773319}">
+                    System.ChangeMasterVolumeBy(2.0)
+                </Action>
+                <Action XML_Guid="{B913CA80-4772-4EB6-9D47-D8A40DE06D87}">
+                    EventGhost.ShowOSD(u'Volume {int(round(eg.result))}%', u'0;-36;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, False)
+                </Action>
+                <Action XML_Guid="{37B8B72A-8853-4E06-AC40-D1ECDE4EF320}">
+                    EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+                </Action>
+            </Macro>
+        </Folder>
+    </Folder>
+    <Folder Name="Volume Control" XML_Guid="{0156F86B-8146-4D9E-BD66-C7D76CD9A030}">
+        <Macro Name="VolumeUp" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}" Expanded="True">
+            <Event Name="MceRemote.Mce.VolumeUp" XML_Guid="{6C9FAE88-14E5-49B4-8DE9-0D9052EDD96F}" />
+            <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAASAw==', False, False, u'', True, False, False, False, False)
+            </Action>
+            <Action XML_Guid="{5980E8B5-5A08-408E-8702-24B37E85EA9C}">
+                EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+            </Action>
+        </Macro>
+        <Macro Name="VolumeDown" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+            <Event Name="MceRemote.Mce.VolumeDown" XML_Guid="{72AAD094-5F06-40A5-B195-07747D978EA8}" />
+            <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAATAw==', False, False, u'', True, False, False, False, False)
+            </Action>
+            <Action XML_Guid="{5980E8B5-5A08-408E-8702-24B37E85EA9C}">
+                EventGhost.AutoRepeat(0.6, 0.3, 0.01, 3.0)
+            </Action>
+        </Macro>
+        <Macro Name="Mute" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+            <Event Name="MceRemote.Mce.Mute" XML_Guid="{648A7274-F5AD-4EBD-AD4F-559BFCAA080A}" />
+            <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+                System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAAUAw==', False, False, u'', True, False, False, False, False)
+            </Action>
+        </Macro>
+    </Folder>
+    <Macro Name="Windows key" XML_Guid="{30BC80AB-A257-4ED9-A027-ED215EE6E28F}">
+        <Event Name="MceRemote.Mce.Start" XML_Guid="{8AA6ECC6-5B73-4B2E-A1D7-240684D8658F}" />
+        <Action XML_Guid="{7DB2CC9E-F691-459D-9772-26A199CA9FC3}">
+            Window.SendKeys(u'{Win}', False)
+        </Action>
+        <Action XML_Guid="{B1FA1D0A-D30B-441F-BCFF-B3B7A95BFA17}">
+            EventGhost.EnableExclusive(XmlIdLink(72))
+        </Action>
+    </Macro>
+    <Macro Name="PIP" XML_Guid="{DF63F1A7-BE4D-4C56-8AAB-C40B83221F17}">
+        <Event Name="MceRemote.Mce.LiveTV" XML_Guid="{7E207C9C-7999-4F00-914A-3A01A3EBF173}" />
+        <Action XML_Guid="{857B3660-D015-43F5-A14E-FDD91DE2C43D}">
+            System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAgAAAKQAAAB3Aw==', False, False, u'', True, False, False, False, False)
+        </Action>
+    </Macro>
+    <Macro Name="Sony TV" XML_Guid="{1E182C0F-DB1D-4D1F-B9F5-E1A8BFA86318}">
+        <Event Name="MceRemote.Mce.Pound" XML_Guid="{8D003CAE-1767-4522-AFE6-512962E7D965}" />
+        <Action XML_Guid="{B8CA3C95-60F2-4AFB-BFCA-77C60C0E8F84}">
+            EventGhost.EnableExclusive(XmlIdLink(557))
+        </Action>
+        <Action XML_Guid="{062B4D1D-C5C5-4F86-9CEC-824F908E2BBF}">
+            System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAgAAAHcAAAANAw==', True, True, u'', True, True, False, False, False)
+        </Action>
+    </Macro>
+    <Macro Name="Sony HDMI1" XML_Guid="{1E182C0F-DB1D-4D1F-B9F5-E1A8BFA86318}">
+        <Event Name="MceRemote.Mce.Enter" XML_Guid="{BEC2CAD5-5640-498C-947C-5C261A362DB7}" />
+        <Action XML_Guid="{02E0E0CA-39F5-4A9A-8D94-9631D81EE277}">
+            EventGhost.EnableExclusive(XmlIdLink(127))
+        </Action>
+        <Action XML_Guid="{E622B7D7-FA88-4AE7-8B9E-9825D38ADC88}">
+            System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAgAAABoAAABaAw==', True, False, u'', True, False, False, False, False)
+        </Action>
+        <Action XML_Guid="{F218A318-CEF7-4C38-AFDD-7B290C17C3F7}">
+            EventGhost.ShowOSD(u'Computer', u'0;-36;0;0;0;700;0;0;0;1;0;0;2;32;Arial', (255, 255, 255), (0, 0, 0), 4, (0, 0), 0, 3.0, None)
+        </Action>
+    </Macro>
+    <Macro Name="Sony Picture Off" XML_Guid="{1E182C0F-DB1D-4D1F-B9F5-E1A8BFA86318}">
+        <Event Name="MceRemote.Mce.Record" XML_Guid="{454ADB7A-441C-4193-9F73-80F4699920A8}" />
+        <Action XML_Guid="{E622B7D7-FA88-4AE7-8B9E-9825D38ADC88}">
+            System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAQAAAAEAAAA+Aw==', True, False, u'', True, False, False, False, False)
+        </Action>
+    </Macro>
+    <Macro Name="Power " XML_Guid="{3BE706B3-CE00-48CF-BE01-156597B3FE09}">
+        <Event Name="MceRemote.Mce.Power" XML_Guid="{0DDD2F76-6017-40EB-820E-B8D71B555303}" />
+        <Action XML_Guid="{062B4D1D-C5C5-4F86-9CEC-824F908E2BBF}">
+            System.Command(u'DLNALib /a C:\\ffmpeg\\bin\\sony\\tv.xml IRCC XSendIRCC AAAAAgAAAHcAAAANAw==', True, True, u'', True, True, False, False, False)
+        </Action>
+        <Action XML_Guid="{99920DD4-98A4-49EE-BE2C-C3ACE4796BE5}">
+            EventGhost.Wait(1.0)
+        </Action>
+        <Action XML_Guid="{94C5E554-E119-4DE2-85A2-3304779EEA0A}">
+            System.PowerDown(True)
+        </Action>
+    </Macro>
+    <Macro Name="Kill Kodi" XML_Guid="{4573C429-C41F-41D0-9825-A9CF1AC4060F}">
+        <Event Name="MceRemote.Mce.Recorded_TV" XML_Guid="{F52BE844-5E73-439D-A7D4-67F5DE45BC37}" />
+        <Action Name="taskkill" XML_Guid="{97682CA1-EB16-45CD-B697-B645893E2E4C}">
+            EventGhost.PythonScript(u'import os\nos.system("taskkill /im Kodi.exe /f")')
+        </Action>
+    </Macro>
+</EventGhost>
