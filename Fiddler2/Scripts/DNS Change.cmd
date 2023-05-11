@@ -14,7 +14,7 @@ ECHO 2 - Obtain DNS Automatically
 ECHO 3 - EXIT
 ECHO.
 SET /P M=Type 1, 2, 3, or 4 then press ENTER:
-IF %M%==1 GOTO NOTE
+IF %M%==1 GOTO Nada
 IF %M%==2 GOTO CALC
 IF %M%==3 GOTO EOF
 :NOTE
