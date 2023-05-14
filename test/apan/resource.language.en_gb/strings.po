@@ -1,4 +1,4 @@
-# Kodi Media Center language fils
+# Kodi Media Center language files
 # Addon Name: Cumination
 # Addon id: plugin.video.cumination
 # Addon Provider: Cumination
