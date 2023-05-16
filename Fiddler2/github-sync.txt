@@ -1,4 +1,4 @@
-Can you create a yaml script that syncronizes 2 folders on github, here is the folder structure:
+Can you create a yaml script that syncronizes 2 folders o github, here is the folder structure:
 repository: dobbelina/repository.cumination
           ref: main
 repository: dobbelina/repository.dobbelina
