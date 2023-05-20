@@ -1,9 +1,0 @@
-Can you create a yaml script that syncronizes 2 folders on github, here is the folder structure:
-repository: dobbelina/repository.cumination
-          ref: main
-repository: dobbelina/repository.dobbelina
-          ref: master
-repository.cumination is private
-repository.dobbelina is public
-plugin.video.cumination is the name of the folder in both repositories
-The syncronization should take place at a push event
