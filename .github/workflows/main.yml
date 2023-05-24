@@ -1,10 +1,10 @@
-name: Concatenate Commands
+name: Interactive Workflow
 
 on:
   workflow_dispatch:
     inputs:
       my-input:
-        description: 'Enter commands'
+        description: 'Enter a value'
         required: true
 
 jobs:
@@ -14,8 +14,7 @@ jobs:
     steps:
       - name: Set input value as environment variable
         run: |
-          echo "MY_INPUT='$(echo "${{ github.event.inputs.my-input }}" | sed "s/'/'\\\\''/g")'" >> $GITHUB_ENV
+          echo "MY_INPUT=${{ github.event.inputs.my-input }}" >> $GITHUB_ENV
 
-      - name: Execute commands
-        run: |
-          eval "$MY_INPUT"
+      - name: Print input value
+        run: "$MY_INPUT"
