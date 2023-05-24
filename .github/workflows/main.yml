@@ -12,5 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set input value as environment variable
+        run: |
+          echo "MY_INPUT=${{ github.event.inputs.my-input }}" >> $GITHUB_ENV
+
       - name: Print input value
-        run: "${ github.event.inputs.my-input }"
+        run: echo ${{ MY_INPUT }}
