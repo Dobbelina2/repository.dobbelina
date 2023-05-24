@@ -13,4 +13,4 @@ jobs:
 
     steps:
       - name: Print input value
-        run: ${ github.event.inputs.my-input }
+        run: echo "Input value: ${{ github.event.inputs.my-input }}"
