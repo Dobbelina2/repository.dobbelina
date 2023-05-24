@@ -1,4 +1,4 @@
-name: Interactive Workflow
+name: Concatenate Echo Outputs
 
 on:
   workflow_dispatch:
@@ -12,9 +12,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set input value as environment variable
+      - name: Set input value as environment variable and concatenate echo outputs
         run: |
           echo "MY_INPUT=${{ github.event.inputs.my-input }}" >> $GITHUB_ENV
-
-      - name: Print input value
-        run: "$MY_INPUT"
+          |
+          if [[ "$MY_INPUT" == "concatenate" ]]; then
+            echo "Hallo"
+            echo "There!"
+          else
+            echo "Invalid command"
+            exit 1
+          fi
