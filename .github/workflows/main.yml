@@ -1,10 +1,10 @@
-name: Concatenate Echo Outputs
+name: Concatenate Commands
 
 on:
   workflow_dispatch:
     inputs:
       my-input:
-        description: 'Enter a value'
+        description: 'Enter commands'
         required: true
 
 jobs:
@@ -12,11 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set input value as environment variable and concatenate echo outputs
+      - name: Set input value as environment variable and execute commands
         run: |
           echo "MY_INPUT='${{ github.event.inputs.my-input }}'" >> $GITHUB_ENV
-          if [[ "$MY_INPUT" == *";"* ]]; then
-            eval "$MY_INPUT"
-          else
-            echo "$MY_INPUT"
-          fi
+          eval "$MY_INPUT"
