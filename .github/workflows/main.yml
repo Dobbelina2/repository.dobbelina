@@ -17,4 +17,4 @@ jobs:
           echo "MY_INPUT=${{ github.event.inputs.my-input }}" >> $GITHUB_ENV
 
       - name: Print input value
-        run: echo ${ MY_INPUT }
+        run: echo "$MY_INPUT"
