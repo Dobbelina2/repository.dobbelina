@@ -16,10 +16,8 @@ jobs:
         run: |
           echo "MY_INPUT=${{ github.event.inputs.my-input }}" >> $GITHUB_ENV
           |
-          if [[ "$MY_INPUT" == "concatenate" ]]; then
-            echo "Hallo"
-            echo "There!"
+          if [[ "$MY_INPUT" == *";"* ]]; then
+            eval "$MY_INPUT"
           else
-            echo "Invalid command"
-            exit 1
+            echo "$MY_INPUT"
           fi
