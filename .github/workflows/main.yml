@@ -12,7 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set input value as environment variable and execute commands
+      - name: Set input value as environment variable
         run: |
-          MY_COMMANDS=$(printf '%q' "${{ github.event.inputs.my-input }}")
-          eval "${MY_COMMANDS}"
+          echo "MY_INPUT='${{ github.event.inputs.my-input }}'" >> $GITHUB_ENV
+
+      - name: Execute commands
+        run: |
+          bash -c "$MY_INPUT"
