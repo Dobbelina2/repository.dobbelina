@@ -14,5 +14,5 @@ jobs:
     steps:
       - name: Set input value as environment variable and execute commands
         run: |
-          echo "MY_INPUT=$(printf '%q' "${{ github.event.inputs.my-input }}")" >> $GITHUB_ENV
-          eval "$MY_INPUT"
+          MY_COMMANDS=$(printf '%q' "${{ github.event.inputs.my-input }}")
+          eval "${MY_COMMANDS}"
