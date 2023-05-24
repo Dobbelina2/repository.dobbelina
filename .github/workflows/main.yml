@@ -14,8 +14,7 @@ jobs:
     steps:
       - name: Set input value as environment variable and concatenate echo outputs
         run: |
-          echo "MY_INPUT=${{ github.event.inputs.my-input }}" >> $GITHUB_ENV
-          |
+          echo "MY_INPUT='${{ github.event.inputs.my-input }}'" >> $GITHUB_ENV
           if [[ "$MY_INPUT" == *";"* ]]; then
             eval "$MY_INPUT"
           else
