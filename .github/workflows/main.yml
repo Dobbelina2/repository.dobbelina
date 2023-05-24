@@ -1,0 +1,12 @@
+name: Git Prompt
+
+on:
+  workflow_dispatch:
+
+jobs:
+  execute_command:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Execute custom command
+        run: ${{ inputs.command }}
