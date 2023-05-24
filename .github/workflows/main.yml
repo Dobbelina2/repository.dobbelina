@@ -1,12 +1,16 @@
-name: Git Prompt
+name: Interactive Workflow
 
 on:
   workflow_dispatch:
+    inputs:
+      my-input:
+        description: 'Enter a value'
+        required: true
 
 jobs:
-  execute_command:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Execute custom command
-        run: ${{ inputs.command }}
+      - name: Print input value
+        run: echo "Input value: ${{ github.event.inputs.my-input }}"
