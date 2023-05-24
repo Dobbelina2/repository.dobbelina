@@ -14,8 +14,8 @@ jobs:
     steps:
       - name: Set input value as environment variable
         run: |
-          echo "MY_INPUT='${{ github.event.inputs.my-input }}'" >> $GITHUB_ENV
+          echo "MY_INPUT='$(echo "${{ github.event.inputs.my-input }}" | sed "s/'/'\\\\''/g")'" >> $GITHUB_ENV
 
       - name: Execute commands
         run: |
-          bash -c "$MY_INPUT"
+          eval "$MY_INPUT"
