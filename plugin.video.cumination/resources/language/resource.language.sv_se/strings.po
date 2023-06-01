@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: Cumination
 # Addon id: plugin.video.cumination
-# Addon Provider: Cumination
+# Addon Provider: Cuminations
 msgid ""
 msgstr ""
 "Project-Id-Version: Kodi Addons\n"
